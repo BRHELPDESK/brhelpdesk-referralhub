@@ -1,0 +1,76 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top-up Wallet - BRHelpDesk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      padding: 40px;
+      text-align: center;
+      color: #333;
+    }
+    .wallet {
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #6a1b9a;
+    }
+    .amount {
+      font-size: 28px;
+      color: #2e7d32;
+      margin: 20px 0;
+    }
+    .info {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 25px;
+      background: #6a1b9a;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Top-up Wallet</h1>
+  <div class="wallet">
+    <p class="amount">Wallet Balance: ₹850</p>
+    <p class="info">Next ID Unlock Amount: ₹1000</p>
+    <p class="info">Remaining to Unlock: ₹150</p>
+  </div>
+  <a href="dashboard.html">Back to Dashboard</a>
+</body>
+</html>
+!-- Topup Wallet Section -->
+<div style="margin-top: 30px; background: #f3f3f3; padding: 20px; border-radius: 10px;">
+  <h2 style="color: #333;">Topup Wallet Info</h2>
+  <p style="font-size: 16px;">
+    When your top-up wallet reaches ₹1000, a new ID will be created with ₹100 matching income and a daily income limit of ₹1000. 
+    Similarly, for ₹2000, ₹4000, ₹6000, etc., new IDs are created with matching income and ceiling equal to the top-up amount.
+  </p>
+  <p style="font-weight: bold; color: #007bff;">You will earn from all your IDs simultaneously as they grow!</p>
+</div>
+!-- Match History Section -->
+<div style="margin-top: 30px; background: #e8f5e9; padding: 20px; border-radius: 10px;">
+  <h2 style="color: #2e7d32;">Matching Income History</h2>
+  <ul style="line-height: 1.8;">
+    <li>Left: 1 match | Right: 1 match → ₹50 Matching Income</li>
+    <li>Daily Matching Limit starts from ₹500</li>
+    <li>Matching increases as your top-up wallet grows</li>
+  </ul>
+  <p style="color: #388e3c; font-weight: bold;">You earn even if downlines are activated by others!</p>
+</div>

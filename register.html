@@ -1,12 +1,35 @@
 !DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRHELPDESK Register</title>
+  <title>BR Helpdesk Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body>
-    <h1>BRHELPDESK രജിസ്റ്റർ പേജ്</h1>
-    <p>ഇവിടെ രജിസ്റ്റർ ചെയ്യാനുള്ള ഓപ്ഷനുകൾ വരും.</p>
+<body style="font-family: sans-serif; background: #f3e5f5; padding: 20px;">
+  <h2>BR Helpdesk Registration</h2>
+  <form onsubmit="sendWhatsApp(); return false;" style="display: flex; flex-direction: column; max-width: 400px;">
+    <label>Name</label>
+    <input type="text" id="name" required />
+
+    <label>Mobile Number</label>
+    <input type="tel" id="mobile" required />
+
+    <label>Referral ID</label>
+    <input type="text" id="referral" required />
+
+    <button type="submit" style="margin-top: 20px; background: #8e24aa; color: white; padding: 10px; border: none;">Register via WhatsApp</button>
+  </form>
+
+  <script>
+    function sendWhatsApp() {
+      var name = document.getElementById("name").value;
+      var mobile = document.getElementById("mobile").value;
+      var referral = document.getElementById("referral").value;
+
+      var message = `*BR Helpdesk Registration*\n\n*Name:* ${name}\n*Mobile:* ${mobile}\n*Referral ID:* ${referral}`;
+      var url = "https://wa.me/918943484667?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
 </html>
+

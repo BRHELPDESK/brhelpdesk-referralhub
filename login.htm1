@@ -1,0 +1,75 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | BRHELPDESK</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #00bcd4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0097a7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="loginUser()">Login</button>
+    <p id="error" style="color: red; text-align:center;"></p>
+  </div>
+
+  <script>
+    function loginUser() {
+      const phone = document.getElementById('phone').value;
+      const password = document.getElementById('password').value;
+
+      const userData = JSON.parse(localStorage.getItem(phone));
+
+      if (userData && userData.password === password) {
+        localStorage.setItem("loggedInUser", phone);
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById('error').innerText = "Invalid phone or password.";
+      }
+    }
+  </script>
+</body>
+</html>
+
