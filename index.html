@@ -1,72 +1,78 @@
+
 !DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>BRHELPDESK Referral Hub</title>
+  <title>BRHELPDESK Login</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       text-align: center;
-      padding: 20px;
+      background: #f5f5f5;
+      padding: 50px;
     }
-
-    h1 {
-      font-size: 32px;
-      color: #00ffe7;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #ff0080;
-      color: white;
-      padding: 12px 20px;
+    input, button {
+      padding: 10px;
       margin: 10px;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background-color: #ff66a3;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>BRHELPDESK Referral Hub</h1>
-  <p>Register & Earn from these trusted apps — Powered by BRHELPDESK + ChatGPT</p>
+  <h2>Login / Register</h2>
+  <input type="email" id="email" placeholder="Email" /><br/>
+  <input type="password" id="password" placeholder="Password" /><br/>
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Register</button>
+  <button onclick="logout()">Logout</button>
+  <p id="message"></p>
 
-  <div class="section">
-    <a class="button" href="https://rozdhan.com/">Roz Dhan</a>
-    <a class="button" href="https://frizza.in/">Frizza</a>
-    <a class="button" href="https://cashkaro.com/">CashKaro</a>
-    <a class="button" href="https://jioupload.com/?ref=haneef123">JioUpload</a>
-    <a class="button" href="http://the-pocket-money.com/pm/1b678ab46ecd232a98c8633f24cfa202">Pocket Money (W0M9R3)</a>
-    <a class="button" href="https://app-earnings-link.com/givvyMusic/0izn3s6qoe9tnnam19">Givvy Music</a>
-    <a class="button" href="https://topdeal.app.link/6M1%E0%B4%B1%E0%B4%BE%E0%B4%AF%E0%B5%81%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B8%E0%B5%8D%E0%B4%AC">EarnKaro Deals</a>
-    <a class="button" href="http://tbk.bz/8ju9uirc">TaskBucks</a>
-  </div>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBpbrii88jFokTA-8Kk6hDqF6l8HVuyWBE",
+      authDomain: "brhelpdesk-5212e.firebaseapp.com",
+      projectId: "brhelpdesk-5212e",
+      storageBucket: "brhelpdesk-5212e.appspot.com",
+      messagingSenderId: "696112965282",
+      appId: "1:696112965282:web:9a40ab4ac81a58a01759fb",
+      measurementId: "G-5VZ2QEJER5"
+    };
 
-  <div class="footer">
-    © 2025 BRHELPDESK | All rights reserved
-  </div>
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      auth.signInWithEmailAndPassword(email, password)
+        .then(user => {
+          document.getElementById("message").innerText = "Login successful!";
+          // Redirect to referral page if needed
+          // window.location.href = "referralhub.html";
+        })
+        .catch(error => {
+          document.getElementById("message").innerText = error.message;
+        });
+    }
+
+    function register() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(user => {
+          document.getElementById("message").innerText = "Registered successfully!";
+        })
+        .catch(error => {
+          document.getElementById("message").innerText = error.message;
+        });
+    }
+
+    function logout() {
+      auth.signOut().then(() => {
+        document.getElementById("message").innerText = "Logged out.";
+      });
+    }
+  </script>
 </body>
 </html>
+
