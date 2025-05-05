@@ -1,84 +1,64 @@
 !DOCTYPE html>
 <html>
 <head>
-  <title>BRHELPDESK Login</title>
-  <script type="module">
-    // Firebase Imports
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-    // Firebase Config
-    const firebaseConfig = {
-      apiKey: "AIzaSyBpbrii88jFokTA-8Kk6hDqF6l8HVuyWBE",
-      authDomain: "brhelpdesk-5212e.firebaseapp.com",
-      projectId: "brhelpdesk-5212e",
-      storageBucket: "brhelpdesk-5212e.appspot.com",
-      messagingSenderId: "696112965282",
-      appId: "1:696112965282:web:9a40ab4ac81a58a01759fb",
-      measurementId: "G-5VZ2QEJER5"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    // Register User
-    window.registerUser = function () {
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          alert("Registration Successful!");
-        })
-        .catch((error) => {
-          alert("Error: " + error.message);
-        });
-    }
-
-    // Login User
-    window.loginUser = function () {
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          alert("Login Successful!");
-        })
-        .catch((error) => {
-          alert("Error: " + error.message);
-        });
-    }
-
-    // Logout User
-    window.logoutUser = function () {
-      signOut(auth)
-        .then(() => {
-          alert("Logged out successfully.");
-        })
-        .catch((error) => {
-          alert("Error: " + error.message);
-        });
-    }
-
-    // Auth State Check
-    onAuthStateChanged(auth, (user) => {
-      const status = document.getElementById("status");
-      if (user) {
-        status.innerText = "Logged in as: " + user.email;
-      } else {
-        status.innerText = "Not logged in.";
-      }
-    });
-  </script>
+  <title>BRHELPDESK Referral Hub</title>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+    .card { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 0 10px #ccc; }
+    .logout { background: red; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
 </head>
 <body>
-  <h1>BRHELPDESK Login</h1>
-  <input type="email" id="email" placeholder="Enter Email"><br><br>
-  <input type="password" id="password" placeholder="Enter Password"><br><br>
-  <button onclick="registerUser()">Register</button>
-  <button onclick="loginUser()">Login</button>
-  <button onclick="logoutUser()">Logout</button>
-  <p id="status">Checking login status...</p>
+  <h2>Welcome, <span id="userEmail">User</span></h2>
+
+  <div class="card">
+    <h3>Your Referral Link</h3>
+    <p id="refLink">Loading...</p>
+  </div>
+
+  <div class="card">
+    <h3>Referral Apps</h3>
+    <ul>
+      <li><a href="https://roz.app.link/your_referral" target="_blank">Roz Dhan</a></li>
+      <li><a href="https://frizza.in/referral_link" target="_blank">Frizza</a></li>
+      <li><a href="#">More Apps Coming...</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Earnings</h3>
+    <p>Total Referrals: <span id="refCount">0</span></p>
+    <p>Total Income: ₹<span id="income">0</span></p>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+
+  <script>
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        document.getElementById('userEmail').textContent = user.email;
+        document.getElementById('refLink').textContent = `https://brhelpdesk.github.io/register.html?ref=${user.uid}`;
+        
+        const dbRef = firebase.database().ref("users/" + user.uid);
+        dbRef.once('value').then(snapshot => {
+          const data = snapshot.val() || {};
+          document.getElementById('refCount').textContent = data.referrals || 0;
+          document.getElementById('income').textContent = data.income || 0;
+        });
+      } else {
+        window.location.href = "login.html";
+      }
+    });
+
+    function logout() {
+      firebase.auth().signOut().then(() => {
+        window.location.href = "login.html";
+      });
+    }
+  </script>
 </body>
 </html>
