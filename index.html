@@ -1,6 +1,4 @@
-
-function login() {
-      !DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
   <title>BRHELPDESK Login</title>
@@ -24,42 +22,46 @@ function login() {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
-    // Elements
+    // Register User
     window.registerUser = function () {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          alert("Registered successfully!");
+          alert("Registration Successful!");
         })
         .catch((error) => {
           alert("Error: " + error.message);
         });
     }
 
+    // Login User
     window.loginUser = function () {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          alert("Logged in!");
+          alert("Login Successful!");
         })
         .catch((error) => {
           alert("Error: " + error.message);
         });
     }
 
+    // Logout User
     window.logoutUser = function () {
-      signOut(auth).then(() => {
-        alert("Logged out!");
-      }).catch((error) => {
-        alert("Error: " + error.message);
-      });
+      signOut(auth)
+        .then(() => {
+          alert("Logged out successfully.");
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
     }
 
-    // Check user state
+    // Auth State Check
     onAuthStateChanged(auth, (user) => {
       const status = document.getElementById("status");
       if (user) {
@@ -71,14 +73,16 @@ function login() {
   </script>
 </head>
 <body>
-  <h1>BRHELPDESK Login System</h1>
-  <input type="email" id="email" placeholder="Email"><br><br>
-  <input type="password" id="password" placeholder="Password"><br><br>
-  <button onclick="loginUser()">Login</button>
+  <h1>BRHELPDESK Login</h1>
+  <input type="email" id="email" placeholder="Enter Email"><br><br>
+  <input type="password" id="password" placeholder="Enter Password"><br><br>
   <button onclick="registerUser()">Register</button>
+  <button onclick="loginUser()">Login</button>
   <button onclick="logoutUser()">Logout</button>
   <p id="status">Checking login status...</p>
 </body>
 </html>
+
+
 
 
