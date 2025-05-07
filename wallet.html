@@ -3,47 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wallet | BRHELPDESK</title>
+  <title>Wallet - BRHELPDESK</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #8e2de2, #4a00e0);
-      color: white;
+      background: #f2f2f2;
+      margin: 0;
       padding: 20px;
     }
-    .wallet-box {
-      background: rgba(0,0,0,0.3);
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 400px;
-      margin: auto;
+    h1 {
+      color: #444;
       text-align: center;
     }
-    .wallet-box h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
+    .wallet-summary {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
     }
-    .amount {
-      font-size: 40px;
-      margin: 20px 0;
+    .wallet-summary h2 {
+      color: #0088cc;
     }
-    .btn {
-      background: #fff;
-      color: #4a00e0;
+    .wallet-summary p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      background: #0088cc;
+      color: white;
       padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <div class="wallet-box">
-    <h1>Wallet Balance</h1>
-    <div class="amount">₹0.00</div>
-    <button class="btn">Withdraw</button>
+
+  <h1>Wallet</h1>
+
+  <div class="wallet-summary">
+    <h2>Current Balance</h2>
+    <p>₹1500</p>
+
+    <h2>Recent Transactions</h2>
+    <p>2025-04-21: +₹50 (Matching Bonus)</p>
+    <p>2025-04-20: +₹100 (Referral Bonus)</p>
+    <p>2025-04-19: -₹200 (Withdrawal)</p>
   </div>
+
+  <div style="text-align: center;">
+    <a href="https://brhelpdesk.github.io/brhelpdesk-referralhub/dashboard.html">Back to Dashboard</a>
+  </div>
+
 </body>
 </html>
 
