@@ -1,65 +1,85 @@
 !DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Team - BRHelpDesk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f1f8e9;
       padding: 20px;
+      background: #f1f1f1;
+    }
+    h2 {
       text-align: center;
     }
-
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: white;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
     nav a {
       margin: 0 10px;
-      text-decoration: none;
-      color: #33691e;
-    }
-
-    .team-member {
-      background-color: #ffffff;
-      margin: 10px auto;
-      padding: 15px;
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    .team-member strong {
-      color: #2e7d32;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="dashboard.html">Dashboard</a> |
-    <a href="wallet.html">Wallet</a> |
-    <a href="matching.html">Matching</a> |
-    <a href="referralhub.html">Referral Hub</a>
-  </nav>
+<nav>
+  <a href="dashboard.html">Dashboard</a> |
+  <a href="wallet.html">Wallet</a> |
+  <a href="matching.html">Matching History</a> |
+  <a href="referralhub.html">Referral Hub</a> |
+  <a href="team.html">My Team</a>
+</nav>
 
-  <h2>My Team</h2>
-  <p>Below is a sample view of your direct referrals:</p>
+<h2>My Team</h2>
+<p><strong>Your ID:</strong> <span id="myId"></span></p>
 
-  <div class="team-member">
-    <p><strong>ID:</strong> ID101</p>
-    <p><strong>Name:</strong> Arun</p>
-    <p><strong>Rank:</strong> Foreman</p>
-  </div>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Referral ID</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="teamTable">
+    <!-- Referral team list will be shown here -->
+  </tbody>
+</table>
 
-  <div class="team-member">
-    <p><strong>ID:</strong> ID102</p>
-    <p><strong>Name:</strong> Neha</p>
-    <p><strong>Rank:</strong> Foreman</p>
-  </div>
+<script>
+  const userId = localStorage.getItem("br_user_id") || "Not Logged In";
+  document.getElementById("myId").innerText = userId;
 
-  <div class="team-member">
-    <p><strong>ID:</strong> ID103</p>
-    <p><strong>Name:</strong> Faizal</p>
-    <p><strong>Rank:</strong> Supervisor</p>
-  </div>
+  // Sample referral list (replace with dynamic if needed)
+  const referrals = [
+    { id: "ID101", status: "Active" },
+    { id: "ID102", status: "Pending" },
+    { id: "ID103", status: "Active" }
+  ];
+
+  const tableBody = document.getElementById("teamTable");
+  referrals.forEach((ref, index) => {
+    const row = `<tr>
+      <td>${index + 1}</td>
+      <td>${ref.id}</td>
+      <td>${ref.status}</td>
+    </tr>`;
+    tableBody.innerHTML += row;
+  });
+</script>
 
 </body>
 </html>
