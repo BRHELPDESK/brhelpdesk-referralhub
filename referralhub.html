@@ -1,53 +1,86 @@
 !DOCTYPE html>
 <html>
 <head>
-  <title>BRHELPDESK Referral Hub</title>
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+  <meta charset="UTF-8">
+  <title>Referral Hub - BRHelpDesk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff3e0;
+      padding: 20px;
+      text-align: center;
+    }
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyBpbrii88jFokTA-8Kk6hDqF6l8HVuyWBE",
-      authDomain: "brhelpdesk-5212e.firebaseapp.com",
-      projectId: "brhelpdesk-5212e",
-      storageBucket: "brhelpdesk-5212e.appspot.com",
-      messagingSenderId: "696112965282",
-      appId: "1:696112965282:web:9a40ab4ac81a58a01759fb",
-      measurementId: "G-5VZ2QEJER5",
-      databaseURL: "https://brhelpdesk-5212e-default-rtdb.firebaseio.com"
-    };
+    nav {
+      margin-bottom: 20px;
+    }
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getDatabase(app);
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ef6c00;
+    }
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const userId = user.uid;
-        const userRef = ref(db, 'users/' + userId);
-        onValue(userRef, (snapshot) => {
-          const data = snapshot.val();
-          if (data) {
-            document.getElementById("email").innerText = data.email || "No email";
-            document.getElementById("referrals").innerText = data.totalReferrals || "0";
-            document.getElementById("earnings").innerText = "₹" + (data.totalEarnings || 0);
-            document.getElementById("referralLink").innerText = data.referralLink || "Not available";
-          }
-        });
-      } else {
-        alert("Please log in to access your referral hub.");
-        window.location.href = "login.html"; // redirect to login page
-      }
-    });
-  </script>
+    .app-card {
+      background: #ffffff;
+      padding: 15px;
+      margin: 15px auto;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .app-card img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .app-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .app-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #ef6c00;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h2>Welcome to BRHELPDESK Referral Hub</h2>
-  <p><strong>Email:</strong> <span id="email"></span></p>
-  <p><strong>Total Referrals:</strong> <span id="referrals">0</span></p>
-  <p><strong>Total Earnings:</strong> <span id="earnings">₹0</span></p>
-  <p><strong>Your Referral Link:</strong> <span id="referralLink"></span></p>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
+    <a href="matching.html">Matching</a> |
+    <a href="team.html">My Team</a>
+  </nav>
+
+  <h1>Referral Hub</h1>
+  <p>Join apps below & earn instant referral income.</p>
+
+  <div class="app-card">
+    <img src="https://play-lh.googleusercontent.com/YZ8cJ8R2.png" alt="Roz Dhan">
+    <h3>Roz Dhan</h3>
+    <p>Get ₹25 per referral instantly.</p>
+    <a href="https://roz.app.link/your_referral" target="_blank">Join Now</a>
+  </div>
+
+  <div class="app-card">
+    <img src="https://play-lh.googleusercontent.com/frizza_logo.png" alt="Frizza">
+    <h3>Frizza</h3>
+    <p>Earn ₹30 per friend who joins.</p>
+    <a href="https://frizza.in/referral_link" target="_blank">Start Earning</a>
+  </div>
+
+  <div class="app-card">
+    <h3>More apps coming...</h3>
+    <p>Stay tuned for verified earning apps.</p>
+  </div>
+
+  <p>Powered by BRHelpDesk + ChatGPT</p>
+
 </body>
 </html>
-
