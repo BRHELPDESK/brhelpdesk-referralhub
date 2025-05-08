@@ -6,41 +6,28 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #e3f2fd;
+      background-color: #f1f8e9;
       padding: 20px;
       text-align: center;
-    }
-
-    nav {
-      margin-bottom: 20px;
     }
 
     nav a {
       margin: 0 10px;
       text-decoration: none;
-      color: #1976d2;
+      color: #33691e;
     }
 
-    table {
-      margin: auto;
-      border-collapse: collapse;
-      width: 90%;
-      max-width: 600px;
-    }
-
-    th, td {
-      border: 1px solid #90caf9;
-      padding: 10px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #42a5f5;
-      color: white;
-    }
-
-    td {
+    .team-member {
       background-color: #ffffff;
+      margin: 10px auto;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .team-member strong {
+      color: #2e7d32;
     }
   </style>
 </head>
@@ -53,32 +40,26 @@
     <a href="referralhub.html">Referral Hub</a>
   </nav>
 
-  <h1>My Team</h1>
-  <p>Track your direct and indirect team members.</p>
+  <h2>My Team</h2>
+  <p>Below is a sample view of your direct referrals:</p>
 
-  <table>
-    <tr>
-      <th>SL No.</th>
-      <th>User ID</th>
-      <th>Rank</th>
-      <th>Status</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>ID123</td>
-      <td>Foreman</td>
-      <td>Active</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>ID456</td>
-      <td>Foreman</td>
-      <td>Pending</td>
-    </tr>
-    <!-- Add more rows dynamically as needed -->
-  </table>
+  <div class="team-member">
+    <p><strong>ID:</strong> ID101</p>
+    <p><strong>Name:</strong> Arun</p>
+    <p><strong>Rank:</strong> Foreman</p>
+  </div>
 
-  <p>Powered by BRHelpDesk + ChatGPT</p>
+  <div class="team-member">
+    <p><strong>ID:</strong> ID102</p>
+    <p><strong>Name:</strong> Neha</p>
+    <p><strong>Rank:</strong> Foreman</p>
+  </div>
+
+  <div class="team-member">
+    <p><strong>ID:</strong> ID103</p>
+    <p><strong>Name:</strong> Faizal</p>
+    <p><strong>Rank:</strong> Supervisor</p>
+  </div>
 
 </body>
 </html>
