@@ -1,64 +1,78 @@
 !DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Matching History - BRHelpDesk</title>
+  <title>Matching History | BRHelpDesk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: #fff;
+      background-color: #fff;
       padding: 20px;
       text-align: center;
     }
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: rgba(255, 255, 255, 0.1);
-    }
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid #ccc;
-    }
-    th {
-      background-color: rgba(0, 0, 0, 0.2);
+    nav {
+      margin-bottom: 20px;
     }
     nav a {
       margin: 0 10px;
-      color: #fff;
-      text-decoration: underline;
+      text-decoration: none;
+      color: #333;
+    }
+    h1 {
+      color: #2d3436;
+    }
+    table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    th {
+      background-color: #81ecec;
+    }
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
     }
   </style>
 </head>
 <body>
+
   <nav>
-    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
-    <a href="referralhub.html">Referral Hub</a>
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
   </nav>
 
   <h1>Matching Income History</h1>
-
+  
   <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Left ID</th>
-        <th>Right ID</th>
-        <th>Matching Income</th>
-      </tr>
-    </thead>
-    <tbody id="matching-history">
-      <tr>
-        <td>2025-05-06</td>
-        <td>BR12345</td>
-        <td>BR67890</td>
-        <td>₹50</td>
-      </tr>
-      <!-- More rows will be added here via JavaScript in future -->
-    </tbody>
+    <tr>
+      <th>SL No</th>
+      <th>Date</th>
+      <th>Left ID</th>
+      <th>Right ID</th>
+      <th>Matching Income</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2025-05-01</td>
+      <td>BR1001</td>
+      <td>BR1002</td>
+      <td>₹50</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2025-05-02</td>
+      <td>BR1003</td>
+      <td>BR1004</td>
+      <td>₹50</td>
+    </tr>
+    <!-- Add more rows if needed -->
   </table>
+
 </body>
 </html>
