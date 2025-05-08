@@ -1,53 +1,31 @@
 !DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Wallet - BRHelpDesk</title>
+  <title>Wallet | BRHelpDesk</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    nav a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: underline;
-    }
-    .wallet-box {
-      background: rgba(0,0,0,0.3);
-      margin-top: 30px;
-      padding: 20px;
-      border-radius: 12px;
-    }
+    body { font-family: Arial, sans-serif; background-color: #f0f8ff; padding: 20px; text-align: center; }
+    h1 { color: #333; }
+    .wallet-box { border: 2px solid #444; border-radius: 10px; padding: 20px; background: #fff; display: inline-block; }
+    .amount { font-size: 24px; font-weight: bold; color: green; }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
     <a href="matching.html">Matching History</a> |
     <a href="referralhub.html">Referral Hub</a> |
     <a href="team.html">My Team</a>
   </nav>
 
-  <h1>Wallet</h1>
-
+  <h1>My Wallet</h1>
   <div class="wallet-box">
-    <h2>Total Referrals: <span id="totalReferrals">0</span></h2>
-    <h2>Total Income: ₹<span id="totalIncome">0</span></h2>
+    <p>Total Income:</p>
+    <p class="amount">₹750</p>
+    <p>Today’s Matching Income:</p>
+    <p class="amount">₹100</p>
+    <p>Top-Up Wallet:</p>
+    <p class="amount">₹200</p>
   </div>
-
-  <script>
-    // Replace this logic with dynamic loading from database if needed
-    const totalReferrals = 0;
-    const incomePerReferral = 25;
-    const totalIncome = totalReferrals * incomePerReferral;
-
-    document.getElementById('totalReferrals').innerText = totalReferrals;
-    document.getElementById('totalIncome').innerText = totalIncome;
-  </script>
 </body>
 </html>
