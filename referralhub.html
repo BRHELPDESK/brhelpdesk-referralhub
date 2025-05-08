@@ -1,71 +1,37 @@
 !DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Referral Hub - BRHelpDesk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e3f2fd;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #1565c0;
-    }
-
-    .app-link {
-      background-color: #ffffff;
-      margin: 10px auto;
-      padding: 15px;
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
-
-    .app-link a {
-      text-decoration: none;
-      color: #0d47a1;
-      font-weight: bold;
-    }
-
-    .logout {
-      margin-top: 20px;
-    }
+    body { font-family: Arial; background: #f0f8ff; padding: 20px; }
+    .card { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+    .btn { display: block; background: #4CAF50; color: white; padding: 10px; margin-top: 10px; text-align: center; border-radius: 5px; text-decoration: none; }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="dashboard.html">Dashboard</a> |
-    <a href="wallet.html">Wallet</a> |
-    <a href="matching.html">Matching</a> |
-    <a href="team.html">My Team</a>
-  </nav>
+<h2 style="text-align: center;">Referral Hub</h2>
 
-  <h2>Referral Hub</h2>
-  <p>Share the apps below to earn referral income instantly!</p>
+<div class="card">
+  <strong>Your Referral Link:</strong>
+  <p id="refLink">Loading...</p>
+</div>
 
-  <div class="app-link">
-    <p>Roz Dhan</p>
-    <a href="https://roz.app.link/your_referral">Join & Earn ₹25</a>
-  </div>
+<div class="card">
+  <strong>Apps that give income:</strong>
+  <a href="https://roz.app.link/your_referral" class="btn" target="_blank">Roz Dhan</a>
+  <a href="https://frizza.in/referral_link" class="btn" target="_blank">Frizza</a>
+  <a href="#" class="btn">More Apps Coming...</a>
+</div>
 
-  <div class="app-link">
-    <p>Frizza</p>
-    <a href="https://frizza.in/referral_link">Join & Earn ₹25</a>
-  </div>
+<a href="dashboard.html" class="btn" style="background: #2196F3;">Back to Dashboard</a>
 
-  <div class="app-link">
-    <p>More apps coming soon...</p>
-  </div>
-
-  <div class="logout">
-    <a href="index.html">Logout</a>
-  </div>
+<script>
+  const userId = localStorage.getItem("br_user_id") || "your-id";
+  document.getElementById("refLink").textContent = "https://brhelpdesk.github.io/brhelpdesk-referralhub/register.html?ref=" + userId;
+</script>
 
 </body>
 </html>
