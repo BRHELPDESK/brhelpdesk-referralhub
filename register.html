@@ -6,42 +6,41 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f1f8e9;
-      padding: 20px;
+      background-color: #e3f2fd;
       text-align: center;
+      padding: 20px;
     }
 
     form {
-      background-color: #ffffff;
+      background: white;
       padding: 20px;
       border-radius: 10px;
-      display: inline-block;
+      width: 300px;
+      margin: 0 auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    input {
+    input[type="text"], input[type="number"], input[type="submit"] {
       display: block;
+      width: 90%;
       margin: 10px auto;
       padding: 10px;
-      width: 250px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
 
-    button {
-      padding: 10px 20px;
-      background-color: #43a047;
+    input[type="submit"] {
+      background-color: #1976d2;
       color: white;
       border: none;
       cursor: pointer;
     }
 
-    nav {
-      margin-bottom: 20px;
-    }
-
     nav a {
       margin: 0 10px;
       text-decoration: none;
-      color: #2e7d32;
+      color: #1565c0;
     }
   </style>
 </head>
@@ -54,18 +53,13 @@
     <a href="referralhub.html">Referral Hub</a>
   </nav>
 
-  <h2>Register New User</h2>
-
+  <h2>New User Registration</h2>
   <form>
     <input type="text" placeholder="Full Name" required>
     <input type="text" placeholder="Mobile Number" required>
-    <input type="text" placeholder="Referral ID" value="AUTO_FILL_REF_ID" required>
-    <input type="email" placeholder="Email (optional)">
-    <button type="submit">Register</button>
+    <input type="text" placeholder="Referral ID" required>
+    <input type="submit" value="Register">
   </form>
-
-  <p>After successful registration, your BRHelpDesk ID will be created automatically.</p>
-  <p>Powered by ChatGPT + BRHelpDesk</p>
 
 </body>
 </html>
