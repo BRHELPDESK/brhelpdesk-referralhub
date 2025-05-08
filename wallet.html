@@ -1,21 +1,33 @@
 !DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BRHELPDESK - Wallet</title>
+  <meta charset="UTF-8">
+  <title>Wallet - BRHelpDesk</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
-    nav a { margin-right: 15px; font-weight: bold; color: #007bff; text-decoration: none; }
-    h1 { color: #333; }
-    .wallet-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    .wallet-section { margin-top: 20px; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: underline;
+    }
+    .wallet-box {
+      background: rgba(0,0,0,0.3);
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
   <nav>
+    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
-    <a href="wallet.html">Wallet</a> |
     <a href="matching.html">Matching History</a> |
     <a href="referralhub.html">Referral Hub</a> |
     <a href="team.html">My Team</a>
@@ -24,23 +36,18 @@
   <h1>Wallet</h1>
 
   <div class="wallet-box">
-    <div class="wallet-section">
-      <h2>Total Matching Income: ₹0</h2>
-      <p>(Updates automatically as matches happen)</p>
-    </div>
-
-    <div class="wallet-section">
-      <h3>Top-Up Wallet</h3>
-      <p>₹0 (10% of matching income reserved here)</p>
-    </div>
-
-    <div class="wallet-section">
-      <h3>Withdrawal Wallet</h3>
-      <p>₹0</p>
-    </div>
+    <h2>Total Referrals: <span id="totalReferrals">0</span></h2>
+    <h2>Total Income: ₹<span id="totalIncome">0</span></h2>
   </div>
 
-  <br>
-  <a href="index.html">Logout</a>
+  <script>
+    // Replace this logic with dynamic loading from database if needed
+    const totalReferrals = 0;
+    const incomePerReferral = 25;
+    const totalIncome = totalReferrals * incomePerReferral;
+
+    document.getElementById('totalReferrals').innerText = totalReferrals;
+    document.getElementById('totalIncome').innerText = totalIncome;
+  </script>
 </body>
 </html>
