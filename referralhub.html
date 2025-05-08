@@ -33,5 +33,18 @@
   document.getElementById("refLink").textContent = "https://brhelpdesk.github.io/brhelpdesk-referralhub/register.html?ref=" + userId;
 </script>
 
-</body>
+</body> script>
+  // URL-ൽ നിന്ന് Referral ID എടുത്ത് കാണിക്കുക
+  const urlParams = new URLSearchParams(window.location.search);
+  const refId = urlParams.get('ref');
+
+  if (refId) {
+    document.getElementById('referral-link').innerText =
+      `https://brhelpdesk.github.io/brhelpdesk-referralhub/?ref=${refId}`;
+  } else {
+    document.getElementById('referral-link').innerText =
+      'Referral ID not found. Please register or login.';
+  }
+</script>
+
 </html>
