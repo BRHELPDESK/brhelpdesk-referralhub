@@ -1,45 +1,61 @@
-!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ml">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Login - BRHelpDesk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      color: white;
       text-align: center;
-      padding: 50px;
+      padding: 40px;
+    }
+    form {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-top: 20px;
     }
     input {
       padding: 10px;
       margin: 10px;
-      width: 80%;
-      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
     }
     button {
       padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
+      background-color: #fff;
+      color: #000;
       border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h2>Welcome to BRHelpDesk</h2>
-  <p>Please login to continue</p>
-  <input type="text" id="userId" placeholder="Enter Your ID" /><br/>
-  <button onclick="login()">Login</button>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="register.html">Register</a> |
+    <a href="referralhub.html">Referral Hub</a>
+  </nav>
 
-  <script>
-    function login() {
-      const userId = document.getElementById("userId").value.trim();
-      if (userId) {
-        localStorage.setItem("br_user_id", userId);
-        window.location.href = "dashboard.html";
-      } else {
-        alert("Please enter your ID");
-      }
-    }
-  </script>
+  <h1>Login to BRHelpDesk</h1>
+
+  <form id="loginForm">
+    <input type="text" placeholder="Mobile Number" required><br>
+    <input type="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <p>Don't have an account? <a href="register.html" style="color: yellow;">Register here</a></p>
 </body>
 </html>
