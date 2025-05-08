@@ -1,46 +1,34 @@
-
-<!DOCTYPE html>
-<html lang="en">
+!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>BRHelpDesk Dashboard</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-    nav {
-      margin-bottom: 20px;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: blue;
-      font-weight: bold;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f0f8ff; text-align: center; }
+    nav { background: #222; padding: 10px; margin-bottom: 20px; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { margin: 20px auto; max-width: 600px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #aaa; }
+    h1 { color: #444; }
+    .ref-link { font-size: 18px; margin: 10px 0; color: #008000; }
   </style>
 </head>
 <body>
-
   <nav>
-    <a href="dashboard.html">Dashboard</a> |
-    <a href="wallet.html">Wallet</a> |
-    <a href="matching.html">Matching History</a> |
-    <a href="referralhub.html">Referral Hub</a> |
+    <a href="dashboard.html">Dashboard</a>
+    <a href="wallet.html">Wallet</a>
+    <a href="matching.html">Matching History</a>
+    <a href="referralhub.html">Referral Hub</a>
     <a href="team.html">My Team</a>
   </nav>
 
-  <h1>Welcome to BRHelpDesk</h1>
-  <h2>Your Referral Link</h2>
-  <p>https://brhelpdesk.github.io/brhelpdesk-referralhub/?ref=your-id</p>
+  <section>
+    <h1>Welcome to BRHelpDesk</h1>
+    <p><strong>Your Referral Link:</strong></p>
+    <p class="ref-link">https://brhelpdesk.github.io/brhelpdesk-referralhub/?ref=YOUR-ID</p>
 
-  <h2>Quick Links</h2>
-  <a href="referralhub.html">Referral Hub</a> |
-  <a href="register.html">Register New User</a> |
-  <a href="wallet.html">Wallet</a>
-
-  <p style="margin-top: 40px;">Powered by ChatGPT + BRHelpDesk</p>
-
+    <h3>Quick Links</h3>
+    <p><a href="referralhub.html">Referral Hub</a> | <a href="register.html">Register New User</a> | <a href="wallet.html">Wallet</a></p>
+    
+    <p style="margin-top: 30px; font-size: 14px;">Powered by ChatGPT + BRHelpDesk</p>
+  </section>
 </body>
 </html>
