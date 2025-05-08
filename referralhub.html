@@ -1,18 +1,18 @@
 !DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BRHELPDESK - Referral Hub</title>
+  <meta charset="UTF-8">
+  <title>Referral Hub - BRHELPDESK</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; text-align: center; padding: 20px; }
-    nav a { margin: 0 10px; text-decoration: none; font-weight: bold; color: #0077cc; }
-    h2 { margin-top: 30px; }
-    .referral-links a { display: block; margin: 10px 0; font-size: 18px; color: #006600; text-decoration: underline; }
+    body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; }
+    h1 { color: #333; }
+    nav a { margin-right: 15px; font-weight: bold; text-decoration: none; color: #007bff; }
+    .app-link { margin: 10px 0; display: block; }
+    .container { background: white; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
   </style>
 </head>
 <body>
-  <nav>
+  <nav style="text-align: center; margin-bottom: 20px;">
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
     <a href="matching.html">Matching History</a> |
@@ -20,21 +20,13 @@
     <a href="team.html">My Team</a>
   </nav>
 
-  <h1>Welcome, User</h1>
-  <h2>Your Referral Link</h2>
-  <p>Loading...</p>
-
-  <h2>Referral Apps</h2>
-  <div class="referral-links">
-    <a href="https://roz.app.link/your_referral">Roz Dhan</a>
-    <a href="https://frizza.in/referral_link">Frizza</a>
-    <a href="#">More Apps Coming...</a>
+  <div class="container">
+    <h1>Referral Hub</h1>
+    <p>Share these links to earn referral income:</p>
+    
+    <a class="app-link" href="https://roz.app.link/your_referral" target="_blank">Roz Dhan</a>
+    <a class="app-link" href="https://frizza.in/referral_link" target="_blank">Frizza</a>
+    <a class="app-link" href="#">More Apps Coming Soon...</a>
   </div>
-
-  <h2>Earnings</h2>
-  <p>Total Referrals: 0</p>
-  <p>Total Income: ₹0</p>
-
-  <a href="index.html">Logout</a>
 </body>
 </html>
