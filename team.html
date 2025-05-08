@@ -6,8 +6,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #36d1dc, #5b86e5);
-      color: white;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
       text-align: center;
       padding: 20px;
     }
@@ -20,14 +20,14 @@
       width: 90%;
       margin: 20px auto;
       border-collapse: collapse;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
     }
     th, td {
-      padding: 10px;
-      border: 1px solid white;
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
     }
     th {
-      background-color: rgba(0,0,0,0.3);
+      background-color: rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -36,32 +36,34 @@
     <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
-    <a href="matching.html">Matching History</a> |
     <a href="referralhub.html">Referral Hub</a>
   </nav>
 
   <h1>My Team</h1>
 
   <table>
-    <tr>
-      <th>User ID</th>
-      <th>Name</th>
-      <th>Joining Date</th>
-      <th>Rank</th>
-    </tr>
-    <tr>
-      <td>BR1234</td>
-      <td>Rahim</td>
-      <td>2025-05-01</td>
-      <td>Foreman</td>
-    </tr>
-    <tr>
-      <td>BR1235</td>
-      <td>Liya</td>
-      <td>2025-05-03</td>
-      <td>Member</td>
-    </tr>
-    <!-- Add more team members here -->
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Level</th>
+        <th>Joined On</th>
+      </tr>
+    </thead>
+    <tbody id="team-members">
+      <tr>
+        <td>BR1001</td>
+        <td>Ravi</td>
+        <td>Level 1</td>
+        <td>2025-05-06</td>
+      </tr>
+      <tr>
+        <td>BR1002</td>
+        <td>Sneha</td>
+        <td>Level 2</td>
+        <td>2025-05-06</td>
+      </tr>
+    </tbody>
   </table>
 </body>
 </html>
