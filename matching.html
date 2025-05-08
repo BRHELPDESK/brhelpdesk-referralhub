@@ -1,58 +1,42 @@
 !DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
   <meta charset="UTF-8">
-  <title>Matching History - BRHELPDESK</title>
+  <title>Matching History - BRHelpDesk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #eef2f3;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #fff;
       padding: 20px;
-    }
-    nav {
       text-align: center;
-      margin-bottom: 20px;
-    }
-    nav a {
-      margin-right: 15px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #2980b9;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
     }
     table {
-      width: 100%;
+      width: 90%;
+      margin: 20px auto;
       border-collapse: collapse;
-      background-color: white;
-      margin-top: 20px;
-      border-radius: 10px;
-      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
     }
     th, td {
       padding: 12px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #ccc;
     }
     th {
-      background-color: #3498db;
-      color: white;
+      background-color: rgba(0, 0, 0, 0.2);
     }
-    tr:hover {
-      background-color: #f1f1f1;
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <nav>
+    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
-    <a href="matching.html">Matching History</a> |
-    <a href="referralhub.html">Referral Hub</a> |
-    <a href="team.html">My Team</a>
+    <a href="referralhub.html">Referral Hub</a>
   </nav>
 
   <h1>Matching Income History</h1>
@@ -63,25 +47,18 @@
         <th>Date</th>
         <th>Left ID</th>
         <th>Right ID</th>
-        <th>Matching Amount</th>
+        <th>Matching Income</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="matching-history">
       <tr>
-        <td>06-05-2025</td>
-        <td>BR1002</td>
-        <td>BR1003</td>
+        <td>2025-05-06</td>
+        <td>BR12345</td>
+        <td>BR67890</td>
         <td>₹50</td>
       </tr>
-      <tr>
-        <td>07-05-2025</td>
-        <td>BR1005</td>
-        <td>BR1006</td>
-        <td>₹50</td>
-      </tr>
-      <!-- More rows can be added dynamically using JavaScript -->
+      <!-- More rows will be added here via JavaScript in future -->
     </tbody>
   </table>
-
 </body>
 </html>
