@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f6ff;
+      background-color: #f9f9f9;
       padding: 20px;
     }
     nav {
@@ -14,34 +14,32 @@
       margin-bottom: 20px;
     }
     nav a {
-      margin-right: 15px;
-      font-weight: bold;
+      margin: 0 10px;
       text-decoration: none;
-      color: #2980b9;
+      color: #0077cc;
+      font-weight: bold;
     }
-    h1 {
+    h2 {
       text-align: center;
-      color: #2c3e50;
+      color: #4a148c;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      background-color: white;
       margin-top: 20px;
-      border-radius: 10px;
-      overflow: hidden;
+      background: white;
     }
     th, td {
+      border: 1px solid #ccc;
       padding: 12px;
       text-align: center;
-      border-bottom: 1px solid #ddd;
     }
     th {
-      background-color: #27ae60;
+      background-color: #6a1b9a;
       color: white;
     }
-    tr:hover {
-      background-color: #f9f9f9;
+    tr:nth-child(even) {
+      background-color: #f3e5f5;
     }
   </style>
 </head>
@@ -55,34 +53,33 @@
     <a href="team.html">My Team</a>
   </nav>
 
-  <h1>My Team</h1>
+  <h2>My Team Structure</h2>
 
   <table>
     <thead>
       <tr>
-        <th>SL No.</th>
+        <th>Sl.No</th>
         <th>User ID</th>
-        <th>Name</th>
-        <th>Joining Date</th>
+        <th>Join Date</th>
+        <th>Side (L/R)</th>
         <th>Status</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>1</td>
-        <td>BR1010</td>
-        <td>Rahul</td>
-        <td>06-05-2025</td>
+        <td>user123</td>
+        <td>2025-05-01</td>
+        <td>L</td>
         <td>Active</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>BR1011</td>
-        <td>Aneesh</td>
-        <td>07-05-2025</td>
-        <td>Inactive</td>
+        <td>user456</td>
+        <td>2025-05-02</td>
+        <td>R</td>
+        <td>Active</td>
       </tr>
-      <!-- Add more rows as needed -->
     </tbody>
   </table>
 
