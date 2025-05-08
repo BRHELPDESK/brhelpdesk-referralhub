@@ -1,54 +1,16 @@
 !DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Matching History - BRHelpDesk</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BRHELPDESK - Matching History</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    table {
-      width: 90%;
-      max-width: 700px;
-      margin: auto;
-      border-collapse: collapse;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    th {
-      background-color: #007bff;
-      color: white;
-    }
-
-    tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    nav {
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #007bff;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
+    nav a { margin-right: 15px; font-weight: bold; color: #007bff; text-decoration: none; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
+    th { background-color: #007bff; color: white; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
   </style>
 </head>
 <body>
@@ -67,22 +29,23 @@
       <th>Date</th>
       <th>Left ID</th>
       <th>Right ID</th>
-      <th>Income</th>
+      <th>Matching Income</th>
     </tr>
     <tr>
-      <td>2025-05-06</td>
-      <td>ID101</td>
-      <td>ID202</td>
+      <td>2025-04-21</td>
+      <td>ID123</td>
+      <td>ID456</td>
       <td>₹50</td>
     </tr>
     <tr>
-      <td>2025-05-05</td>
-      <td>ID303</td>
-      <td>ID404</td>
+      <td>2025-04-20</td>
+      <td>ID789</td>
+      <td>ID321</td>
       <td>₹50</td>
     </tr>
   </table>
 
-  <p>Powered by BRHelpDesk + ChatGPT</p>
+  <br>
+  <a href="dashboard.html">Back to Dashboard</a>
 </body>
 </html>
