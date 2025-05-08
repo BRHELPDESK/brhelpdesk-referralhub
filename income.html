@@ -1,82 +1,84 @@
 !DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Income History - BRHelpDesk</title>
+  <meta charset="UTF-8">
+  <title>Matching History - BRHELPDESK</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #f9fbe7, #e0f7fa);
-      padding: 40px;
-      text-align: center;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
     }
-    h1 {
-      color: #1b5e20;
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    h2 {
+      text-align: center;
+      color: #0d47a1;
     }
     table {
-      margin: 20px auto;
+      width: 100%;
       border-collapse: collapse;
-      width: 95%;
-      max-width: 700px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      background: white;
     }
     th, td {
       border: 1px solid #ccc;
-      padding: 14px;
+      padding: 12px;
       text-align: center;
     }
     th {
-      background: #004d40;
+      background-color: #1976d2;
       color: white;
     }
     tr:nth-child(even) {
-      background-color: #f1f8e9;
-    }
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 25px;
-      background: #006064;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      background-color: #e3f2fd;
     }
   </style>
 </head>
 <body>
-  <h1>Income History</h1>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
+  </nav>
+
+  <h2>Matching Income History</h2>
 
   <table>
-    <tr>
-      <th>Date</th>
-      <th>Source</th>
-      <th>Amount (₹)</th>
-      <th>Status</th>
-    </tr>
-    <tr>
-      <td>2025-04-20</td>
-      <td>Referral Matching</td>
-      <td>₹50</td>
-      <td>Credited</td>
-    </tr>
-    <tr>
-      <td>2025-04-19</td>
-      <td>Level Bonus</td>
-      <td>₹100</td>
-      <td>Credited</td>
-    </tr>
-    <tr>
-      <td>2025-04-18</td>
-      <td>Top-up Reward</td>
-      <td>₹200</td>
-      <td>Pending</td>
-    </tr>
-    <!-- More rows can be added dynamically -->
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Left User</th>
+        <th>Right User</th>
+        <th>Match Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025-05-06</td>
+        <td>user123</td>
+        <td>user456</td>
+        <td>₹50</td>
+      </tr>
+      <tr>
+        <td>2025-05-07</td>
+        <td>user789</td>
+        <td>user321</td>
+        <td>₹50</td>
+      </tr>
+    </tbody>
   </table>
 
-  <a href="dashboard.html">Back to Dashboard</a>
 </body>
 </html>
