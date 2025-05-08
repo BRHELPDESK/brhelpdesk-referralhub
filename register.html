@@ -1,35 +1,93 @@
 !DOCTYPE html>
 <html>
 <head>
-  <title>BR Helpdesk Registration</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Register New User - BRHelpDesk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      text-align: center;
+      padding: 30px;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      display: inline-block;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: left;
+      width: 300px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00796b;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; background: #f3e5f5; padding: 20px;">
-  <h2>BR Helpdesk Registration</h2>
-  <form onsubmit="sendWhatsApp(); return false;" style="display: flex; flex-direction: column; max-width: 400px;">
-    <label>Name</label>
-    <input type="text" id="name" required />
+<body>
+  <nav>
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
+  </nav>
 
-    <label>Mobile Number</label>
-    <input type="tel" id="mobile" required />
+  <h1>Register New User</h1>
 
-    <label>Referral ID</label>
-    <input type="text" id="referral" required />
+  <form id="registerForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" required><br>
 
-    <button type="submit" style="margin-top: 20px; background: #8e24aa; color: white; padding: 10px; border: none;">Register via WhatsApp</button>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" required><br>
+
+    <label for="referral">Referral ID:</label><br>
+    <input type="text" id="referral" value=""><br>
+
+    <input type="submit" value="Register">
   </form>
 
-  <script>
-    function sendWhatsApp() {
-      var name = document.getElementById("name").value;
-      var mobile = document.getElementById("mobile").value;
-      var referral = document.getElementById("referral").value;
+  <p>Powered by BRHelpDesk + ChatGPT</p>
 
-      var message = `*BR Helpdesk Registration*\n\n*Name:* ${name}\n*Mobile:* ${mobile}\n*Referral ID:* ${referral}`;
-      var url = "https://wa.me/918943484667?text=" + encodeURIComponent(message);
-      window.open(url, "_blank");
+  <script>
+    // Autofill referral ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref = urlParams.get('ref');
+    if (ref) {
+      document.getElementById('referral').value = ref;
     }
+
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('User registered successfully!');
+      // Save data or redirect as needed
+    });
   </script>
 </body>
 </html>
-
