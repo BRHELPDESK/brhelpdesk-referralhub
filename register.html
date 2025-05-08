@@ -6,32 +6,31 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ff512f, #dd2476);
+      background: linear-gradient(to right, #ff6a00, #ee0979);
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 40px;
     }
     form {
-      background: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.3);
       padding: 20px;
-      border-radius: 10px;
-      max-width: 400px;
-      margin: auto;
+      border-radius: 12px;
+      display: inline-block;
+      margin-top: 20px;
     }
-    input, select {
-      width: 90%;
+    input {
       padding: 10px;
-      margin: 10px 0;
-      border: none;
+      margin: 10px;
       border-radius: 5px;
+      border: none;
+      width: 200px;
     }
     button {
       padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
       border: none;
-      background: #fff;
-      color: #dd2476;
       border-radius: 5px;
-      font-weight: bold;
       cursor: pointer;
     }
     nav a {
@@ -45,24 +44,19 @@
   <nav>
     <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
-    <a href="referralhub.html">Referral Hub</a> |
-    <a href="wallet.html">Wallet</a>
+    <a href="wallet.html">Wallet</a> |
+    <a href="referralhub.html">Referral Hub</a>
   </nav>
 
-  <h1>Register New User</h1>
+  <h1>Register to BRHelpDesk</h1>
 
-  <form>
-    <input type="text" placeholder="Full Name" required>
-    <input type="text" placeholder="Phone Number" required>
-    <input type="email" placeholder="Email Address">
-    <input type="text" placeholder="Referral ID (optional)">
-    <select required>
-      <option value="">Select Gender</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="other">Other</option>
-    </select>
+  <form id="registerForm">
+    <input type="text" placeholder="Full Name" required><br>
+    <input type="text" placeholder="Mobile Number" required><br>
+    <input type="text" placeholder="Referral ID (Optional)"><br>
     <button type="submit">Register</button>
   </form>
+
+  <p>Already have an account? <a href="login.html" style="color: yellow;">Login here</a></p>
 </body>
 </html>
