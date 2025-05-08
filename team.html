@@ -4,17 +4,50 @@
   <meta charset="UTF-8">
   <title>My Team - BRHELPDESK</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #eef2f7; padding: 20px; }
-    h1 { color: #2c3e50; }
-    nav a { margin-right: 15px; font-weight: bold; text-decoration: none; color: #2980b9; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
-    th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
-    th { background-color: #3498db; color: white; }
-    .container { background: white; padding: 20px; border-radius: 8px; max-width: 800px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f6ff;
+      padding: 20px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin-right: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #2980b9;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #27ae60;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f9f9f9;
+    }
   </style>
 </head>
 <body>
-  <nav style="text-align: center; margin-bottom: 20px;">
+
+  <nav>
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
     <a href="matching.html">Matching History</a> |
@@ -22,36 +55,36 @@
     <a href="team.html">My Team</a>
   </nav>
 
-  <div class="container">
-    <h1>My Team</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>SL No.</th>
-          <th>User ID</th>
-          <th>Joined Date</th>
-          <th>Status</th>
-          <th>Rank</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>ID123</td>
-          <td>2025-04-20</td>
-          <td>Active</td>
-          <td>Foreman</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>ID456</td>
-          <td>2025-04-21</td>
-          <td>Active</td>
-          <td>Foreman</td>
-        </tr>
-        <!-- Add more rows as needed -->
-      </tbody>
-    </table>
-  </div>
+  <h1>My Team</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>SL No.</th>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Joining Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>BR1010</td>
+        <td>Rahul</td>
+        <td>06-05-2025</td>
+        <td>Active</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>BR1011</td>
+        <td>Aneesh</td>
+        <td>07-05-2025</td>
+        <td>Inactive</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+
 </body>
 </html>
