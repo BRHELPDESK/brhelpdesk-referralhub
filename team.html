@@ -1,69 +1,60 @@
 !DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>My Team - BRHelpDesk</title>
+  <title>My Team | BRHelpDesk</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    nav a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: underline;
-    }
+    body { font-family: Arial, sans-serif; background-color: #fffaf0; padding: 20px; text-align: center; }
+    h1 { color: #444; }
     table {
-      width: 90%;
-      margin: 20px auto;
+      width: 80%;
+      margin: auto;
       border-collapse: collapse;
-      background: rgba(255, 255, 255, 0.1);
     }
     th, td {
-      padding: 12px;
-      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      border: 1px solid #ccc;
     }
     th {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: #f9c74f;
+    }
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
-    <a href="referralhub.html">Referral Hub</a>
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
   </nav>
 
   <h1>My Team</h1>
-
   <table>
-    <thead>
-      <tr>
-        <th>User ID</th>
-        <th>Name</th>
-        <th>Level</th>
-        <th>Joined On</th>
-      </tr>
-    </thead>
-    <tbody id="team-members">
-      <tr>
-        <td>BR1001</td>
-        <td>Ravi</td>
-        <td>Level 1</td>
-        <td>2025-05-06</td>
-      </tr>
-      <tr>
-        <td>BR1002</td>
-        <td>Sneha</td>
-        <td>Level 2</td>
-        <td>2025-05-06</td>
-      </tr>
-    </tbody>
+    <tr>
+      <th>SL No</th>
+      <th>Name</th>
+      <th>User ID</th>
+      <th>Joined On</th>
+      <th>Rank</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ali</td>
+      <td>BR1021</td>
+      <td>2025-05-01</td>
+      <td>Foreman</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Fathima</td>
+      <td>BR1022</td>
+      <td>2025-05-02</td>
+      <td>Foreman</td>
+    </tr>
+    <!-- Add more rows as needed -->
   </table>
 </body>
 </html>
