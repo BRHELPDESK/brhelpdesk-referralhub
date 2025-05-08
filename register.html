@@ -1,62 +1,57 @@
 !DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Register - BRHelpDesk</title>
+  <title>Register | BRHelpDesk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ff6a00, #ee0979);
-      color: white;
+      background-color: #f9f9f9;
       text-align: center;
-      padding: 40px;
+      padding: 30px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    h1 {
+      color: #0984e3;
     }
     form {
-      background-color: rgba(0, 0, 0, 0.3);
+      background: #fff;
       padding: 20px;
-      border-radius: 12px;
-      display: inline-block;
-      margin-top: 20px;
+      margin: auto;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     input {
+      width: 90%;
       padding: 10px;
-      margin: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      border: none;
-      width: 200px;
     }
     button {
       padding: 10px 20px;
-      background-color: #fff;
-      color: #000;
+      background: #00b894;
+      color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
-    nav a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: underline;
+    button:hover {
+      background: #019875;
     }
   </style>
 </head>
 <body>
+
   <nav>
-    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
-    <a href="referralhub.html">Referral Hub</a>
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
   </nav>
-
-  <h1>Register to BRHelpDesk</h1>
-
-  <form id="registerForm">
-    <input type="text" placeholder="Full Name" required><br>
-    <input type="text" placeholder="Mobile Number" required><br>
-    <input type="text" placeholder="Referral ID (Optional)"><br>
-    <button type="submit">Register</button>
-  </form>
-
-  <p>Already have an account? <a href="login.html" style="color: yellow;">Login here</a></p>
-</body>
-</html>
