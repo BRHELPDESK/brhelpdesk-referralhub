@@ -6,46 +6,34 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fff3e0;
-      padding: 20px;
+      background-color: #e3f2fd;
       text-align: center;
-    }
-
-    nav {
-      margin-bottom: 20px;
+      padding: 20px;
     }
 
     nav a {
       margin: 0 10px;
       text-decoration: none;
-      color: #ef6c00;
+      color: #1565c0;
     }
 
-    .app-card {
-      background: #ffffff;
+    .app-link {
+      background-color: #ffffff;
+      margin: 10px auto;
       padding: 15px;
-      margin: 15px auto;
-      border-radius: 10px;
       width: 300px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
 
-    .app-card img {
-      width: 80px;
-      height: 80px;
-    }
-
-    .app-card h3 {
-      margin: 10px 0 5px;
-    }
-
-    .app-card a {
-      display: inline-block;
-      padding: 8px 15px;
-      background: #ef6c00;
-      color: white;
-      border-radius: 5px;
+    .app-link a {
       text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+    }
+
+    .logout {
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -58,29 +46,26 @@
     <a href="team.html">My Team</a>
   </nav>
 
-  <h1>Referral Hub</h1>
-  <p>Join apps below & earn instant referral income.</p>
+  <h2>Referral Hub</h2>
+  <p>Share the apps below to earn referral income instantly!</p>
 
-  <div class="app-card">
-    <img src="https://play-lh.googleusercontent.com/YZ8cJ8R2.png" alt="Roz Dhan">
-    <h3>Roz Dhan</h3>
-    <p>Get ₹25 per referral instantly.</p>
-    <a href="https://roz.app.link/your_referral" target="_blank">Join Now</a>
+  <div class="app-link">
+    <p>Roz Dhan</p>
+    <a href="https://roz.app.link/your_referral">Join & Earn ₹25</a>
   </div>
 
-  <div class="app-card">
-    <img src="https://play-lh.googleusercontent.com/frizza_logo.png" alt="Frizza">
-    <h3>Frizza</h3>
-    <p>Earn ₹30 per friend who joins.</p>
-    <a href="https://frizza.in/referral_link" target="_blank">Start Earning</a>
+  <div class="app-link">
+    <p>Frizza</p>
+    <a href="https://frizza.in/referral_link">Join & Earn ₹25</a>
   </div>
 
-  <div class="app-card">
-    <h3>More apps coming...</h3>
-    <p>Stay tuned for verified earning apps.</p>
+  <div class="app-link">
+    <p>More apps coming soon...</p>
   </div>
 
-  <p>Powered by BRHelpDesk + ChatGPT</p>
+  <div class="logout">
+    <a href="index.html">Logout</a>
+  </div>
 
 </body>
 </html>
