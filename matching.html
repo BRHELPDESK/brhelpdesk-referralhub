@@ -1,111 +1,88 @@
 !DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Matching History - BRHELPDESK</title>
+  <meta charset="UTF-8">
+  <title>Matching History - BRHelpDesk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f2f2f2;
-      margin: 0;
       padding: 20px;
-    }
-    h1 {
-      color: #444;
       text-align: center;
     }
+
+    h1 {
+      color: #333;
+    }
+
     table {
-      width: 100%;
+      width: 90%;
+      max-width: 700px;
+      margin: auto;
       border-collapse: collapse;
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
     }
+
     th, td {
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
     }
+
     th {
-      background-color: #0088cc;
+      background-color: #007bff;
       color: white;
     }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      text-align: center;
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
       text-decoration: none;
-      background: #0088cc;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-    .section {
-      margin-top: 40px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .section h2 {
-      color: #444;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    strong {
-      color: #0088cc;
+      color: #007bff;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
+  </nav>
 
   <h1>Matching History</h1>
 
   <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Left ID</th>
-        <th>Right ID</th>
-        <th>Matching Income</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2025-04-21</td>
-        <td>ID123</td>
-        <td>ID456</td>
-        <td>₹50</td>
-      </tr>
-      <tr>
-        <td>2025-04-20</td>
-        <td>ID789</td>
-        <td>ID321</td>
-        <td>₹50</td>
-      </tr>
-    </tbody>
+    <tr>
+      <th>Date</th>
+      <th>Left ID</th>
+      <th>Right ID</th>
+      <th>Income</th>
+    </tr>
+    <tr>
+      <td>2025-05-06</td>
+      <td>ID101</td>
+      <td>ID202</td>
+      <td>₹50</td>
+    </tr>
+    <tr>
+      <td>2025-05-05</td>
+      <td>ID303</td>
+      <td>ID404</td>
+      <td>₹50</td>
+    </tr>
   </table>
 
-  <div style="text-align: center;">
-    <a href="https://brhelpdesk.github.io/brhelpdesk-referralhub/dashboard.html">Back to Dashboard</a>
-  </div>
-
-  <div class="section">
-    <h2>Ranks & Levels</h2>
-    <ul>
-      <li><strong>Foreman:</strong> Complete 5 referrals using any 4 referral links</li>
-      <li><strong>Supervisor:</strong> Help 5 downlines become Foreman</li>
-      <li><strong>Manager:</strong> Help 5 downlines become Supervisor</li>
-      <li><strong>Director:</strong> Help 5 Managers grow under you</li>
-    </ul>
-    <p>Climb ranks and unlock more rewards & recognition!</p>
-  </div>
-
+  <p>Powered by BRHelpDesk + ChatGPT</p>
 </body>
 </html>
-
-
