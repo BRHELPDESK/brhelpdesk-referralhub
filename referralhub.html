@@ -1,32 +1,51 @@
 !DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
   <meta charset="UTF-8">
-  <title>Referral Hub - BRHELPDESK</title>
+  <title>Referral Hub - BRHelpDesk</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; }
-    h1 { color: #333; }
-    nav a { margin-right: 15px; font-weight: bold; text-decoration: none; color: #007bff; }
-    .app-link { margin: 10px 0; display: block; }
-    .container { background: white; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #fc4a1a, #f7b733);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: underline;
+    }
+    .ref-box {
+      background: rgba(0,0,0,0.3);
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .ref-link {
+      color: #fff;
+      font-weight: bold;
+      margin: 10px 0;
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <nav style="text-align: center; margin-bottom: 20px;">
+  <nav>
+    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
     <a href="matching.html">Matching History</a> |
-    <a href="referralhub.html">Referral Hub</a> |
     <a href="team.html">My Team</a>
   </nav>
 
-  <div class="container">
-    <h1>Referral Hub</h1>
-    <p>Share these links to earn referral income:</p>
-    
-    <a class="app-link" href="https://roz.app.link/your_referral" target="_blank">Roz Dhan</a>
-    <a class="app-link" href="https://frizza.in/referral_link" target="_blank">Frizza</a>
-    <a class="app-link" href="#">More Apps Coming Soon...</a>
+  <h1>Referral Hub</h1>
+
+  <div class="ref-box">
+    <h2>Use these links to earn instantly:</h2>
+    <a class="ref-link" href="https://roz.app.link/your_referral">Roz Dhan</a>
+    <a class="ref-link" href="https://frizza.in/referral_link">Frizza</a>
+    <a class="ref-link" href="#">More Apps Coming Soon...</a>
   </div>
 </body>
 </html>
