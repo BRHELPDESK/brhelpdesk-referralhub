@@ -2,52 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Register - BRHelpDesk</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - BRHELPDESK</title>
   <style>
-    body { font-family: Arial; padding: 20px; background: #e0f7fa; }
-    .container { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
-    h2 { text-align: center; }
-    input, button { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; }
-    button { background-color: #00796B; color: white; border: none; }
-    .back { text-align: center; margin-top: 15px; display: block; color: #00796B; }
+    body { font-family: Arial, sans-serif; background-color: #f1f1f1; padding: 20px; }
+    .container {
+      background: white; padding: 30px; max-width: 500px;
+      margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 { text-align: center; color: #2c3e50; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input {
+      width: 100%; padding: 10px; margin-top: 5px;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    button {
+      margin-top: 20px; width: 100%; padding: 12px;
+      background-color: #27ae60; color: white; border: none;
+      font-size: 16px; border-radius: 5px; cursor: pointer;
+    }
+    button:hover { background-color: #219150; }
+    nav { text-align: center; margin-bottom: 20px; }
+    nav a { margin-right: 15px; font-weight: bold; text-decoration: none; color: #2980b9; }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <h2>Register</h2>
-  <input type="text" id="userId" placeholder="Enter your ID" required>
-  <input type="text" id="referralId" placeholder="Referral ID (optional)">
-  <button onclick="registerUser()">Register</button>
-  <a href="dashboard.html" class="back">Back to Dashboard</a>
-</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
+  </nav>
 
-<script>
-  function registerUser() {
-    const userId = document.getElementById("userId").value.trim();
-    const referralId = document.getElementById("referralId").value.trim();
+  <div class="container">
+    <h1>Register New User</h1>
+    <form>
+      <label for="referralId">Referral ID</label>
+      <input type="text" id="referralId" name="referralId" placeholder="Enter Referrer ID" required>
 
-    if (!userId) {
-      alert("Please enter your ID");
-      return;
-    }
+      <label for="username">User Name</label>
+      <input type="text" id="username" name="username" placeholder="Your Name" required>
 
-    // Save current user
-    localStorage.setItem("br_user_id", userId);
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
 
-    // If referred by someone, add to their team
-    if (referralId) {
-      const teamKey = "br_team_" + referralId;
-      const team = JSON.parse(localStorage.getItem(teamKey)) || [];
-      team.push({ id: userId, date: new Date().toLocaleDateString() });
-      localStorage.setItem(teamKey, JSON.stringify(team));
-    }
+      <label for="password">Create Password</label>
+      <input type="password" id="password" name="password" placeholder="Create Password" required>
 
-    alert("Registration successful!");
-    window.location.href = "dashboard.html";
-  }
-</script>
+      <button type="submit">Register</button>
+    </form>
+  </div>
 
 </body>
 </html>
