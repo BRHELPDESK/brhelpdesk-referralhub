@@ -1,52 +1,40 @@
 !DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Referral Hub - BRHelpDesk</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BRHELPDESK - Referral Hub</title>
   <style>
-    body { font-family: Arial; background: #f0f8ff; padding: 20px; }
-    .card { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
-    .btn { display: block; background: #4CAF50; color: white; padding: 10px; margin-top: 10px; text-align: center; border-radius: 5px; text-decoration: none; }
+    body { font-family: Arial, sans-serif; background-color: #f9f9f9; text-align: center; padding: 20px; }
+    nav a { margin: 0 10px; text-decoration: none; font-weight: bold; color: #0077cc; }
+    h2 { margin-top: 30px; }
+    .referral-links a { display: block; margin: 10px 0; font-size: 18px; color: #006600; text-decoration: underline; }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
+  </nav>
 
-<h2 style="text-align: center;">Referral Hub</h2>
+  <h1>Welcome, User</h1>
+  <h2>Your Referral Link</h2>
+  <p>Loading...</p>
 
-<div class="card">
-  <strong>Your Referral Link:</strong>
-  <p id="refLink">Loading...</p>
-</div>h3>Your Referral Link</h3>
-<p id="referral-link">Loading...</p>
+  <h2>Referral Apps</h2>
+  <div class="referral-links">
+    <a href="https://roz.app.link/your_referral">Roz Dhan</a>
+    <a href="https://frizza.in/referral_link">Frizza</a>
+    <a href="#">More Apps Coming...</a>
+  </div>
 
+  <h2>Earnings</h2>
+  <p>Total Referrals: 0</p>
+  <p>Total Income: ₹0</p>
 
-<div class="card">
-  <strong>Apps that give income:</strong>
-  <a href="https://roz.app.link/your_referral" class="btn" target="_blank">Roz Dhan</a>
-  <a href="https://frizza.in/referral_link" class="btn" target="_blank">Frizza</a>
-  <a href="#" class="btn">More Apps Coming...</a>
-</div>
-
-<a href="dashboard.html" class="btn" style="background: #2196F3;">Back to Dashboard</a>
-
-<script>
-  const userId = localStorage.getItem("br_user_id") || "your-id";
-  document.getElementById("refLink").textContent = "https://brhelpdesk.github.io/brhelpdesk-referralhub/register.html?ref=" + userId;
-</script>
-
-</body> script>
-  // URL-ൽ നിന്ന് Referral ID എടുത്ത് കാണിക്കുക
-  const urlParams = new URLSearchParams(window.location.search);
-  const refId = urlParams.get('ref');
-
-  if (refId) {
-    document.getElementById('referral-link').innerText =
-      `https://brhelpdesk.github.io/brhelpdesk-referralhub/?ref=${refId}`;
-  } else {
-    document.getElementById('referral-link').innerText =
-      'Referral ID not found. Please register or login.';
-  }
-</script>
-
+  <a href="index.html">Logout</a>
+</body>
 </html>
