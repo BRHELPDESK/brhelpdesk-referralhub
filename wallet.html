@@ -1,43 +1,15 @@
 !DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>BRHelpDesk Wallet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BRHELPDESK - Wallet</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    .wallet-card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .wallet-item {
-      margin: 15px 0;
-      font-size: 18px;
-    }
-
-    nav {
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #007bff;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+    nav a { margin-right: 15px; font-weight: bold; color: #007bff; text-decoration: none; }
+    h1 { color: #333; }
+    .wallet-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .wallet-section { margin-top: 20px; }
   </style>
 </head>
 <body>
@@ -49,16 +21,26 @@
     <a href="team.html">My Team</a>
   </nav>
 
-  <h1>My Wallet</h1>
+  <h1>Wallet</h1>
 
-  <div class="wallet-card">
-    <div class="wallet-item"><strong>Referral Income:</strong> ₹250</div>
-    <div class="wallet-item"><strong>Matching Income:</strong> ₹100</div>
-    <div class="wallet-item"><strong>Total Balance:</strong> ₹350</div>
+  <div class="wallet-box">
+    <div class="wallet-section">
+      <h2>Total Matching Income: ₹0</h2>
+      <p>(Updates automatically as matches happen)</p>
+    </div>
+
+    <div class="wallet-section">
+      <h3>Top-Up Wallet</h3>
+      <p>₹0 (10% of matching income reserved here)</p>
+    </div>
+
+    <div class="wallet-section">
+      <h3>Withdrawal Wallet</h3>
+      <p>₹0</p>
+    </div>
   </div>
 
-  <p>Powered by BRHelpDesk + ChatGPT</p>
+  <br>
+  <a href="index.html">Logout</a>
 </body>
 </html>
-
-
