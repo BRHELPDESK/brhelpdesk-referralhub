@@ -1,33 +1,38 @@
 !DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>BR HelpDesk</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f8ff;
-      padding: 40px;
-    }
-    h1 {
-      color: #0b5394;
-    }
-    a {
-      display: block;
-      margin: 15px 0;
-      font-size: 18px;
-      color: #0066cc;
-      text-decoration: none;
-    }
-  </style>
+  <title>BRHelpDesk | Referral Hub</title>
 </head>
-<body>
-  <h1>Welcome to BR HelpDesk</h1>
-  <p>Select a section below:</p>
-  <a href="referralhub.html">Referral Hub</a>
-  <a href="wallet.html">Wallet</a>
-  <a href="matching.html">Matching History</a>
-  <a href="team.html">My Team</a>
+<body style="font-family: Arial; text-align: center;">
+
+  <nav style="margin-bottom: 20px;">
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="wallet.html">Wallet</a> |
+    <a href="matching.html">Matching History</a> |
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="team.html">My Team</a>
+  </nav>
+
+  <h1>Welcome to BRHelpDesk</h1>
+
+  <h3>Your Referral Link</h3>
+  <p><strong id="ref-link">Loading...</strong></p>
+
+  <h3>Quick Links</h3>
+  <p>
+    <a href="referralhub.html">Referral Hub</a> |
+    <a href="register.html">Register New User</a> |
+    <a href="wallet.html">Wallet</a>
+  </p>
+
+  <p>Powered by ChatGPT + BRHelpDesk</p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const refId = urlParams.get('ref');
+    document.getElementById("ref-link").innerText = 
+      "https://brhelpdesk.github.io/brhelpdesk-referralhub/?ref=" + (refId || "your-id");
+  </script>
+
 </body>
 </html>
