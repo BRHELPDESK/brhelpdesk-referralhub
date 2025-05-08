@@ -1,28 +1,62 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Register - BRHELPDESK</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f1f1f1; padding: 20px; }
-    .container {
-      background: white; padding: 30px; max-width: 500px;
-      margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    body {
+      font-family: Arial, sans-serif;
+      background: #e3f2fd;
+      padding: 20px;
     }
-    h1 { text-align: center; color: #2c3e50; }
-    label { display: block; margin-top: 15px; font-weight: bold; }
-    input {
-      width: 100%; padding: 10px; margin-top: 5px;
-      border: 1px solid #ccc; border-radius: 5px;
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1565c0;
+      font-weight: bold;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
     button {
-      margin-top: 20px; width: 100%; padding: 12px;
-      background-color: #27ae60; color: white; border: none;
-      font-size: 16px; border-radius: 5px; cursor: pointer;
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
     }
-    button:hover { background-color: #219150; }
-    nav { text-align: center; margin-bottom: 20px; }
-    nav a { margin-right: 15px; font-weight: bold; text-decoration: none; color: #2980b9; }
+    button:hover {
+      background: #1565c0;
+    }
   </style>
 </head>
 <body>
@@ -35,20 +69,20 @@
     <a href="team.html">My Team</a>
   </nav>
 
-  <div class="container">
-    <h1>Register New User</h1>
-    <form>
-      <label for="referralId">Referral ID</label>
-      <input type="text" id="referralId" name="referralId" placeholder="Enter Referrer ID" required>
+  <div class="form-container">
+    <h2>Register New User</h2>
+    <form action="#" method="post">
+      <label for="userid">User ID</label>
+      <input type="text" id="userid" name="userid" required>
 
-      <label for="username">User Name</label>
-      <input type="text" id="username" name="username" placeholder="Your Name" required>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-      <label for="password">Create Password</label>
-      <input type="password" id="password" name="password" placeholder="Create Password" required>
+      <label for="sponsor">Sponsor ID</label>
+      <input type="text" id="sponsor" name="sponsor" required>
 
       <button type="submit">Register</button>
     </form>
