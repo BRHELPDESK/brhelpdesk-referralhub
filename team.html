@@ -1,87 +1,67 @@
 !DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
   <meta charset="UTF-8">
-  <title>My Team - BRHELPDESK</title>
+  <title>My Team - BRHelpDesk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 20px;
-    }
-    nav {
+      background: linear-gradient(to right, #36d1dc, #5b86e5);
+      color: white;
       text-align: center;
-      margin-bottom: 20px;
+      padding: 20px;
     }
     nav a {
       margin: 0 10px;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-    }
-    h2 {
-      text-align: center;
-      color: #4a148c;
+      color: #fff;
+      text-decoration: underline;
     }
     table {
-      width: 100%;
+      width: 90%;
+      margin: 20px auto;
       border-collapse: collapse;
-      margin-top: 20px;
-      background: white;
+      background: rgba(255,255,255,0.1);
     }
     th, td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: center;
+      padding: 10px;
+      border: 1px solid white;
     }
     th {
-      background-color: #6a1b9a;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background-color: #f3e5f5;
+      background-color: rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-
   <nav>
+    <a href="index.html">Home</a> |
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
     <a href="matching.html">Matching History</a> |
-    <a href="referralhub.html">Referral Hub</a> |
-    <a href="team.html">My Team</a>
+    <a href="referralhub.html">Referral Hub</a>
   </nav>
 
-  <h2>My Team Structure</h2>
+  <h1>My Team</h1>
 
   <table>
-    <thead>
-      <tr>
-        <th>Sl.No</th>
-        <th>User ID</th>
-        <th>Join Date</th>
-        <th>Side (L/R)</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>user123</td>
-        <td>2025-05-01</td>
-        <td>L</td>
-        <td>Active</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>user456</td>
-        <td>2025-05-02</td>
-        <td>R</td>
-        <td>Active</td>
-      </tr>
-    </tbody>
+    <tr>
+      <th>User ID</th>
+      <th>Name</th>
+      <th>Joining Date</th>
+      <th>Rank</th>
+    </tr>
+    <tr>
+      <td>BR1234</td>
+      <td>Rahim</td>
+      <td>2025-05-01</td>
+      <td>Foreman</td>
+    </tr>
+    <tr>
+      <td>BR1235</td>
+      <td>Liya</td>
+      <td>2025-05-03</td>
+      <td>Member</td>
+    </tr>
+    <!-- Add more team members here -->
   </table>
-
 </body>
 </html>
