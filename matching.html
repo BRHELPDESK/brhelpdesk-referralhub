@@ -1,19 +1,52 @@
 !DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BRHELPDESK - Matching History</title>
+  <meta charset="UTF-8">
+  <title>Matching History - BRHELPDESK</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
-    nav a { margin-right: 15px; font-weight: bold; color: #007bff; text-decoration: none; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
-    th { background-color: #007bff; color: white; }
-    tr:nth-child(even) { background-color: #f9f9f9; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      padding: 20px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin-right: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #2980b9;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="dashboard.html">Dashboard</a> |
     <a href="wallet.html">Wallet</a> |
@@ -22,30 +55,33 @@
     <a href="team.html">My Team</a>
   </nav>
 
-  <h1>Matching History</h1>
+  <h1>Matching Income History</h1>
 
   <table>
-    <tr>
-      <th>Date</th>
-      <th>Left ID</th>
-      <th>Right ID</th>
-      <th>Matching Income</th>
-    </tr>
-    <tr>
-      <td>2025-04-21</td>
-      <td>ID123</td>
-      <td>ID456</td>
-      <td>₹50</td>
-    </tr>
-    <tr>
-      <td>2025-04-20</td>
-      <td>ID789</td>
-      <td>ID321</td>
-      <td>₹50</td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Left ID</th>
+        <th>Right ID</th>
+        <th>Matching Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>06-05-2025</td>
+        <td>BR1002</td>
+        <td>BR1003</td>
+        <td>₹50</td>
+      </tr>
+      <tr>
+        <td>07-05-2025</td>
+        <td>BR1005</td>
+        <td>BR1006</td>
+        <td>₹50</td>
+      </tr>
+      <!-- More rows can be added dynamically using JavaScript -->
+    </tbody>
   </table>
 
-  <br>
-  <a href="dashboard.html">Back to Dashboard</a>
 </body>
 </html>
