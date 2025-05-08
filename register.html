@@ -1,65 +1,59 @@
 !DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Register - BRHelpDesk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #e3f2fd;
-      text-align: center;
       padding: 20px;
+      background: #eef;
     }
-
     form {
       background: white;
       padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
     }
-
-    input[type="text"], input[type="number"], input[type="submit"] {
-      display: block;
-      width: 90%;
-      margin: 10px auto;
+    input, button {
+      width: 100%;
       padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    input[type="submit"] {
-      background-color: #1976d2;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #1565c0;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="dashboard.html">Dashboard</a> |
-    <a href="wallet.html">Wallet</a> |
-    <a href="matching.html">Matching</a> |
-    <a href="referralhub.html">Referral Hub</a>
-  </nav>
+<h2 style="text-align: center;">Register to BRHelpDesk</h2>
 
-  <h2>New User Registration</h2>
-  <form>
-    <input type="text" placeholder="Full Name" required>
-    <input type="text" placeholder="Mobile Number" required>
-    <input type="text" placeholder="Referral ID" required>
-    <input type="submit" value="Register">
-  </form>
+<form id="registerForm">
+  <label>Your Name:</label>
+  <input type="text" id="name" required>
+
+  <label>Your Mobile Number:</label>
+  <input type="text" id="mobile" required>
+
+  <label>Referral ID:</label>
+  <input type="text" id="refId" value="" readonly>
+
+  <button type="submit">Register</button>
+</form>
+
+<script>
+  // Read referral from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const ref = urlParams.get('ref') || 'No Ref';
+  document.getElementById('refId').value = ref;
+
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Registered Successfully!");
+    localStorage.setItem("br_user_id", "ID" + Math.floor(Math.random() * 1000));
+    window.location.href = "dashboard.html";
+  });
+</script>
 
 </body>
 </html>
