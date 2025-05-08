@@ -3,56 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Register - BRHelpDesk</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #eef;
-    }
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 400px;
-      margin: auto;
-    }
-    input, button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-    }
+    body { font-family: Arial; padding: 20px; background: #e0f7fa; }
+    .container { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+    h2 { text-align: center; }
+    input, button { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background-color: #00796B; color: white; border: none; }
+    .back { text-align: center; margin-top: 15px; display: block; color: #00796B; }
   </style>
 </head>
 <body>
 
-<h2 style="text-align: center;">Register to BRHelpDesk</h2>
-
-<form id="registerForm">
-  <label>Your Name:</label>
-  <input type="text" id="name" required>
-
-  <label>Your Mobile Number:</label>
-  <input type="text" id="mobile" required>
-
-  <label>Referral ID:</label>
-  <input type="text" id="refId" value="" readonly>
-
-  <button type="submit">Register</button>
-</form>
+<div class="container">
+  <h2>Register</h2>
+  <input type="text" id="userId" placeholder="Enter your ID" required>
+  <input type="text" id="referralId" placeholder="Referral ID (optional)">
+  <button onclick="registerUser()">Register</button>
+  <a href="dashboard.html" class="back">Back to Dashboard</a>
+</div>
 
 <script>
-  // Read referral from URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const ref = urlParams.get('ref') || 'No Ref';
-  document.getElementById('refId').value = ref;
+  function registerUser() {
+    const userId = document.getElementById("userId").value.trim();
+    const referralId = document.getElementById("referralId").value.trim();
 
-  document.getElementById('registerForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert("Registered Successfully!");
-    localStorage.setItem("br_user_id", "ID" + Math.floor(Math.random() * 1000));
+    if (!userId) {
+      alert("Please enter your ID");
+      return;
+    }
+
+    // Save current user
+    localStorage.setItem("br_user_id", userId);
+
+    // If referred by someone, add to their team
+    if (referralId) {
+      const teamKey = "br_team_" + referralId;
+      const team = JSON.parse(localStorage.getItem(teamKey)) || [];
+      team.push({ id: userId, date: new Date().toLocaleDateString() });
+      localStorage.setItem(teamKey, JSON.stringify(team));
+    }
+
+    alert("Registration successful!");
     window.location.href = "dashboard.html";
-  });
+  }
 </script>
 
 </body>
