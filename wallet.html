@@ -1,31 +1,6 @@
-!DOCTYPE html>
-<html>
-<head>
-  <title>Wallet | BRHelpDesk</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f0f8ff; padding: 20px; text-align: center; }
-    h1 { color: #333; }
-    .wallet-box { border: 2px solid #444; border-radius: 10px; padding: 20px; background: #fff; display: inline-block; }
-    .amount { font-size: 24px; font-weight: bold; color: green; }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="dashboard.html">Dashboard</a> |
-    <a href="wallet.html">Wallet</a> |
-    <a href="matching.html">Matching History</a> |
-    <a href="referralhub.html">Referral Hub</a> |
-    <a href="team.html">My Team</a>
-  </nav>
 
-  <h1>My Wallet</h1>
-  <div class="wallet-box">
-    <p>Total Income:</p>
-    <p class="amount">₹750</p>
-    <p>Today’s Matching Income:</p>
-    <p class="amount">₹100</p>
-    <p>Top-Up Wallet:</p>
-    <p class="amount">₹200</p>
-  </div>
-</body>
-</html>
+p>Your Referral Link: <span id="referralLink">Loading...</span></p>
+<script>
+  const username = "HANEEF123"; // നിങ്ങളുടെ referral username
+  document.getElementById("referralLink").textContent = `https://brhelpdesk.github.io/brhelpdesk-referralhub/register.html?ref=${username}`;
+</script>
