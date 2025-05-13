@@ -1,2 +1,2 @@
-# brhelpdesk-referralhu
-BR Helpdesk Referral Hub website
+# brhelpdesk-referralhub
+Referral hub for BRHELPDESK app users to access all earning app links easily.
