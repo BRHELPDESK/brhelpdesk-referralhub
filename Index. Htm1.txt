@@ -8,4 +8,13 @@ nav style="background-color: #111; color: #fff; padding: 10px; text-align: cente
   <a href="ranks.html" style="color: #fff; margin: 0 10px;">Ranks</a>
   <a href="profile.html" style="color: #fff; margin: 0 10px;">Profile</a>
 </nav>
+<footer style="background-color: #111; color: #ccc; text-align: center; padding: 20px; margin-top: 40px;">
+  <p>© 2025 BRHELPDESK. All rights reserved.</p>
+  <p>Powered by ChatGPT | Made in Kerala</p>
+  <div>
+    <a href="https://wa.me/918943484667" style="color: #ccc; margin: 0 10px;">WhatsApp</a>
+    <a href="https://t.me/BRHELPDESK" style="color: #ccc; margin: 0 10px;">Telegram</a>
+    <a href="https://youtube.com/@BRHELPDESK" style="color: #ccc; margin: 0 10px;">YouTube</a>
+  </div>
+</footer>
 
