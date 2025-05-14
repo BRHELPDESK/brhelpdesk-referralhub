@@ -1,1 +1,29 @@
 
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wallet - BR Helpdesk</title>
+</head>
+<body>
+  <h1>BR Helpdesk Wallet</h1>
+  <p>Referral Income: ₹<span id="referralIncome">0</span></p>
+  <p>Matching Income: ₹<span id="matchingIncome">0</span></p>
+  <p>Top-Up Wallet: ₹<span id="topupWallet">0</span></p>
+  <p>Total Income: ₹<span id="totalIncome">0</span></p>
+
+  <script>
+    // Dummy Example Data
+    let referral = 250;
+    let matching = 150;
+    let topup = 100;
+
+    document.getElementById('referralIncome').textContent = referral;
+    document.getElementById('matchingIncome').textContent = matching;
+    document.getElementById('topupWallet').textContent = topup;
+    document.getElementById('totalIncome').textContent = referral + matching + topup;
+  </script>
+</body>
+</html>
+
