@@ -3,12 +3,12 @@
 <html lang="ml">
 <head>
   <meta charset="UTF-8">
-  <title>Wallet - BRHELPDESK</title>
+  <title>BRHELPDESK Wallet</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: #fff;
       padding: 20px;
     }
     .container {
@@ -17,20 +17,19 @@
     }
     h1 {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
-    .wallet-info {
-      background: #ffffff22;
+    .wallet-card {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
       padding: 20px;
-      border-radius: 12px;
+      margin-bottom: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(3px);
     }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin: 10px 0;
+    .wallet-card h3 {
+      margin-bottom: 10px;
+      color: #ffd700;
     }
     footer {
       text-align: center;
@@ -42,22 +41,35 @@
 </head>
 <body>
   <div class="container">
-    <h1>Wallet System</h1>
+    <h1>Wallet Overview</h1>
 
-    <div class="wallet-info">
-      <p>Income ലഭിക്കുന്നതിനൊപ്പം നിങ്ങളുടെ Wallet ൽ മൂന്ന് വിഭാഗങ്ങളുണ്ട്:</p>
+    <div class="wallet-card">
+      <h3>Total Income</h3>
+      <p>₹1200</p>
+    </div>
+
+    <div class="wallet-card">
+      <h3>Top-Up Wallet</h3>
+      <p>₹400 (Used for New ID Activation)</p>
+    </div>
+
+    <div class="wallet-card">
+      <h3>Active IDs</h3>
       <ul>
-        <li><strong>Main Wallet:</strong> Matching income & Referral Income</li>
-        <li><strong>Top-up Wallet:</strong> Matching incomeയുടെ 10% ഈ wallet ൽ പോകും</li>
-        <li><strong>Activation Wallet:</strong> New ID ലേക്കുള്ള upgrade ചെലവുകൾ</li>
+        <li>ID#1 - Matching ₹50 | Ceiling ₹500</li>
+        <li>ID#2 - Matching ₹100 | Ceiling ₹1000</li>
       </ul>
+    </div>
 
-      <p>Top-up Wallet ₹1000, ₹2000, ₹4000... ആകുമ്പോൾ new ID activate ചെയ്യാം.</p>
+    <div class="wallet-card">
+      <h3>Withdrawable Balance</h3>
+      <p>₹800</p>
     </div>
 
     <footer>
-      BRHELPDESK © 2025 | Wallet & Top-up System
+      BRHELPDESK © 2025 | Wallet & Income Tracker
     </footer>
   </div>
 </body>
 </html>
+
