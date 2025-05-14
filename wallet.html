@@ -1,55 +1,63 @@
-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8">
+  <title>Wallet - BRHELPDESK</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 20px;
     }
-    .label {
-      font-weight: bold;
-      font-size: 1.2em;
+    .container {
+      max-width: 800px;
+      margin: auto;
     }
-    .value {
-      font-size: 1.6em;
-      margin-top: 5px;
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .wallet-info {
+      background: #ffffff22;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin: 10px 0;
     }
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 0.9em;
-      color: #eee;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>BRHELPDESK Wallet</h1>
+    <h1>Wallet System</h1>
 
-    <div class="card">
-      <div class="label">Total Earnings</div>
-      <div class="value">₹1250</div>
-    </div>
+    <div class="wallet-info">
+      <p>Income ലഭിക്കുന്നതിനൊപ്പം നിങ്ങളുടെ Wallet ൽ മൂന്ന് വിഭാഗങ്ങളുണ്ട്:</p>
+      <ul>
+        <li><strong>Main Wallet:</strong> Matching income & Referral Income</li>
+        <li><strong>Top-up Wallet:</strong> Matching incomeയുടെ 10% ഈ wallet ൽ പോകും</li>
+        <li><strong>Activation Wallet:</strong> New ID ലേക്കുള്ള upgrade ചെലവുകൾ</li>
+      </ul>
 
-    <div class="card">
-      <div class="label">Matching Income (Last 7 Days)</div>
-      <div class="value">₹350</div>
-    </div>
-
-    <div class="card">
-      <div class="label">Top-up Wallet Balance</div>
-      <div class="value">₹600</div>
-    </div>
-
-    <div class="card">
-      <div class="label">Your Current Rank</div>
-      <div class="value">Foreman</div>
-    </div>
-
-    <div class="card">
-      <div class="label">Referrals</div>
-      <div class="value">18 Active Users</div>
+      <p>Top-up Wallet ₹1000, ₹2000, ₹4000... ആകുമ്പോൾ new ID activate ചെയ്യാം.</p>
     </div>
 
     <footer>
-      &copy; 2025 BRHELPDESK - Powered by ChatGPT | Rainbow UI
+      BRHELPDESK © 2025 | Wallet & Top-up System
     </footer>
   </div>
 </body>
 </html>
-
-
