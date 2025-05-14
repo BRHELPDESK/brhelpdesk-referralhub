@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matching History - BRHELPDESK</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #6a1b9a;
+    }
+    .match-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+    .match-item {
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+    }
+    .match-item:last-child {
+      border-bottom: none;
+    }
+    .highlight {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+    .nav {
+      margin-top: 30px;
+    }
+    .nav a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #6a1b9a;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .nav a:hover {
+      background-color: #8e24aa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Matching History</h1>
+
+    <div class="match-box">
+      <div class="match-item">
+        <span>May 14, 2025</span>
+        <span class="highlight">₹50 (Match 1)</span>
+      </div>
+      <div class="match-item">
+        <span>May 13, 2025</span>
+        <span class="highlight">₹100 (Match 2)</span>
+      </div>
+      <div class="match-item">
+        <span>May 12, 2025</span>
+        <span class="highlight">₹75 (Match 1 + Bonus)</span>
+      </div>
+      <div class="match-item">
+        <span>May 11, 2025</span>
+        <span class="highlight">₹50</span>
+      </div>
+    </div>
+
+    <div class="nav">
+      <a href="/earnings.html">Earnings</a>
+      <a href="/wallet.html">Wallet</a>
+      <a href="/profile.html">Profile</a>
+    </div>
+
+    <p style="font-size: 13px; margin-top: 40px; color: #555;">This is a static demo for matching earnings. Live data syncing coming soon. Powered by ChatGPT</p>
+  </div>
+</body>
+</html>
