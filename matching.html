@@ -1,3 +1,85 @@
 
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8">
+  <title>Matching Income - BRHELPDESK</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #f7971e, #ffd200);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #000;
+      margin-bottom: 30px;
+    }
+    .income-box, .wallet-box {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background: #ffeaa7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Matching Income Report</h1>
+
+    <div class="income-box">
+      <h2>Daily Matching Income</h2>
+      <p>Matching per Pair: ₹50</p>
+      <p>Daily Limit: ₹500</p>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Left Matches</th>
+          <th>Right Matches</th>
+          <th>Pairs</th>
+          <th>Income</th>
+        </tr>
+        <tr>
+          <td>2025-05-14</td>
+          <td>20</td>
+          <td>15</td>
+          <td>15</td>
+          <td>₹500</td>
+        </tr>
+        <!-- Add more rows dynamically -->
+      </table>
+    </div>
+
+    <div class="wallet-box">
+      <h2>Top-Up Wallet Status</h2>
+      <p>10% of Matching Income is stored here.</p>
+      <p>Current Wallet Balance: ₹850</p>
+      <p>Once ₹1000 is reached, next ID with higher ceiling (₹100/day) will be activated.</p>
+    </div>
+  </div>
+</body>
+</html>
+
 
       
