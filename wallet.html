@@ -1,32 +1,68 @@
-!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="ml">
 <head>
   <meta charset="UTF-8">
-  <title>My Wallet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRHELPDESK Wallet</title>
   <style>
     body {
-      background: #111;
-      color: #00ffcc;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: #333;
       text-align: center;
-      padding: 40px;
-      font-family: sans-serif;
+    }
+    .container {
+      padding: 20px;
     }
     .wallet-box {
-      margin: 20px auto;
-      padding: 20px;
-      background: #222;
-      border-radius: 10px;
-      width: 80%;
       max-width: 400px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .wallet-box h2 {
+      margin-top: 0;
+      color: #e91e63;
+    }
+    .amount {
+      font-size: 36px;
+      font-weight: bold;
+      color: #4caf50;
+    }
+    .label {
+      font-size: 14px;
+      color: #777;
+    }
+    .section {
+      margin: 30px 0;
     }
   </style>
 </head>
 <body>
-  <h1>My Wallet (Demo)</h1>
-  <div class="wallet-box">
-    <p>Referral Income: ₹125</p>
-    <p>Matching Income: ₹50</p>
-    <p>Total: ₹175</p>
+  <div class="container">
+    <h1>BRHELPDESK Wallet</h1>
+    <div class="wallet-box">
+      <h2>നിങ്ങളുടെ Income</h2>
+      <div class="amount">₹650</div>
+      <div class="label">Total Earnings (Referral + Matching)</div>
+    </div>
+
+    <div class="wallet-box section">
+      <h2>Top-Up Wallet</h2>
+      <div class="amount">₹300</div>
+      <div class="label">Future ID Upgrade Funds</div>
+    </div>
+
+    <div class="wallet-box section">
+      <h2>Available to Withdraw</h2>
+      <div class="amount">₹350</div>
+      <div class="label">You can request withdrawal</div>
+    </div>
+
+    <p style="font-size: 13px; color: #999; margin-top: 40px;">Updated every 24 hours | Powered by ChatGPT</p>
   </div>
 </body>
 </html>
