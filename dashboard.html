@@ -2,7 +2,49 @@
 <html>
 <head>
   <title>BRHelpDesk Dashboard</title>
-  <style>body {
+  <style>body {style>
+  body {
+    background-color: #121212; /* ഡാർക്ക് ബ്ലാക്ക് */
+    color: #FFD700; /* ഗോൾഡൻ കളർ */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #FFD700;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgba(255, 215, 0, 0.1);
+  }
+
+  tbody tr:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+  }
+
+  .total-row {
+    background-color: #333;
+    font-weight: bold;
+    color: #FFD700;
+  }
+
+  h2 {
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 8px;
+  }
+</style>
+
   background-color: #000; /* Black background for contrast */
   color: #FFD700; /* Golden text */
 }
