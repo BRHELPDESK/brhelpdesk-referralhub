@@ -1,3 +1,77 @@
 
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - BRHELPDESK</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      font-family: sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #1565c0;
+    }
+    form {
+      background: white;
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0d47a1;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Join BRHELPDESK</h1>
+  <form onsubmit="event.preventDefault(); alert('Registration submitted!');">
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="text" placeholder="Referral ID (if any)">
+    <select required>
+      <option value="">Select District</option>
+      <option>Kasargod</option>
+      <option>Kannur</option>
+      <option>Ernakulam</option>
+      <option>Other</option>
+    </select>
+    <button type="submit">Register</button>
+  </form>
+
+  <footer>
+    © 2025 BRHELPDESK | Powered by ChatGPT<br>
+    <a href="https://wa.me/918943484667">Admin Help</a>
+  </footer>
+
+</body>
+</html>
+
 
   
