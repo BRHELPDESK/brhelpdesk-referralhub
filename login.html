@@ -1,27 +1,46 @@
 
 <!DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - BR Helpdesk</title>
+  <title>BRHELPDESK - Login</title>
 </head>
 <body>
-  <h1>BR Helpdesk Login</h1>
+  <h2>Login to BRHELPDESK</h2>
+  <input type="email" id="email" placeholder="Enter Email">
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
 
-  <form action="dashboard.html" method="GET">
-    <label for="userid">User ID:</label><br>
-    <input type="text" id="userid" name="userid" required><br><br>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBpbrii88jFokTA-8Kk6hDqF6l8HVuyWBE",
+      authDomain: "brhelpdesk-5212e.firebaseapp.com",
+      projectId: "brhelpdesk-5212e",
+      storageBucket: "brhelpdesk-5212e.appspot.com",
+      messagingSenderId: "696112965282",
+      appId: "1:696112965282:web:9a40ab4ac81a58a01759fb"
+    };
 
-    <input type="submit" value="Login">
-  </form>
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
 
-  <p>പുതിയഉപയോക്താവാണോ? <a href="register.html">ഇവിടെ Register ചെയ്യൂ</a></p>
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Login Successful!");
+          window.location.href = "dashboard.html";
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    }
+
+    window.login = login;
+  </script>
 </body>
 </html>
-
-
-      
