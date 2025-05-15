@@ -1,95 +1,46 @@
 
 <!DOCTYPE html>
-<html lang="ml">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register - BRHELPDESK</title>
-  <style>
-    body {
-      background: linear-gradient(to right, #e3f2fd, #ffffff);
-      font-family: sans-serif;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #1565c0;
-    }
-    form {
-      background: white;
-      max-width: 400px;
-      margin: auto;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    input, select {
-      width: 100%;
-      margin-bottom: 12px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      background: #1565c0;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0d47a1;
-    }
-    footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+  <title>BRHELPDESK - Register</title>
 </head>
 <body>
+  <h2>Register to BRHELPDESK</h2>
+  <input type="email" id="email" placeholder="Enter Email">
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="register()">Register</button>
 
-  <h1>Join BRHELPDESK</h1>
-  <form onsubmit="event.preventDefault(); alert('Registration submitted!');">
-    <input type="text" placeholder="Full Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <input type="text" placeholder="Referral ID (if any)">
-    <select required>
-      <option value="">Select District</option>
-      <option>Kasargod</option>
-      <option>Kannur</option>
-      <option>Ernakulam</option>
-      <option>Other</option>
-    </select>
-    <button type="submit">Register</button>
-  </form>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
-  <footer>
-    © 2025 BRHELPDESK | Powered by ChatGPT<br>
-    <a href="https://wa.me/918943484667">Admin Help</a>
-  </footer>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBpbrii88jFokTA-8Kk6hDqF6l8HVuyWBE",
+      authDomain: "brhelpdesk-5212e.firebaseapp.com",
+      projectId: "brhelpdesk-5212e",
+      storageBucket: "brhelpdesk-5212e.appspot.com",
+      messagingSenderId: "696112965282",
+      appId: "1:696112965282:web:9a40ab4ac81a58a01759fb"
+    };
 
-<!-- Navigation Start -->
-<div style="background:#000;color:#fff;padding:10px;text-align:center;">
-  <a href="register.html" style="color:#fff;margin:10px;">User Registration</a>
-  <a href="wallet.html" style="color:#fff;margin:10px;">My Wallet</a>
-  <a href="matching.html" style="color:#fff;margin:10px;">Matching Income</a>
-  <a href="admin.html" style="color:#fff;margin:10px;">Admin Panel</a>
-  <a href="referralhub.html" style="color:#fff;margin:10px;">Referral Hub</a>
-</div>
-<!-- Navigation End -->
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
 
-<!-- Footer Start -->
-<div style="background:#222;color:#aaa;padding:10px;text-align:center;margin-top:20px;">
-  © 2025 BRHELPDESK. All rights reserved.<br>
-  Powered by ChatGPT | Made in Kerala<br>
-  <a href="https://wa.me/918943484667" style="color:#0f0;">WhatsApp</a>
-</div>
-<!-- Footer End -->
+    function register() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
 
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Registration Successful!");
+          window.location.href = "login.html";
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    }
+
+    window.register = register;
+  </script>
 </body>
 </html>
-
-
-  
