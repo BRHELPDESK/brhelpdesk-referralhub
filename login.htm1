@@ -1,1 +1,17 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - BRHELPDESK</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form>
+    <input type="text" placeholder="Username" required><br>
+    <input type="password" placeholder="Password" required><br>
+    <input type="submit" value="Login">
+  </form>
+  <a href="index.html">Back to Home</a>
+</body>
+</html>
+
