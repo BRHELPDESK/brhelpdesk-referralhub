@@ -2,82 +2,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>BRHELPDESK Referral Form</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #000000, #444444);
-      color: #fff;
+      background: linear-gradient(to right, #000000, #2c2c2c);
+      color: white;
+      font-family: sans-serif;
       padding: 20px;
     }
-    h2 {
+    h1 {
       color: gold;
     }
     label {
       display: block;
       margin-top: 15px;
     }
-    input, select, textarea {
+    input, select {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
-      border: none;
       border-radius: 8px;
+      border: none;
     }
     button {
-      background: gold;
+      margin-top: 20px;
+      background-color: gold;
       color: black;
-      padding: 10px 20px;
+      padding: 10px 15px;
       border: none;
       border-radius: 8px;
-      margin-top: 20px;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
     }
-    .success-message {
+    #success {
       margin-top: 20px;
-      color: #0f0;
+      color: limegreen;
     }
   </style>
 </head>
 <body>
-  <h2>BRHELPDESK – Referral Form</h2>
+  <h1>BRHELPDESK – Referral Form</h1>
   <form id="referralForm">
     <label>Full Name:
-      <input type="text" name="name" required />
+      <input type="text" required>
     </label>
     <label>WhatsApp Number:
-      <input type="tel" name="whatsapp" required />
+      <input type="tel" required>
     </label>
     <label>District:
-      <input type="text" name="district" required />
+      <input type="text" required>
     </label>
-    <label>Referral Code (Optional):
-      <input type="text" name="referralcode" />
+    <label>Referral Code (if any):
+      <input type="text">
     </label>
-    <label>Select Referral Apps Used:
-      <select name="apps" required>
+    <label>Select Referral App:
+      <select required>
         <option value="">Select</option>
         <option value="Roz Dhan">Roz Dhan</option>
-        <option value="Share Market">Share Market</option>
         <option value="CashKaro">CashKaro</option>
+        <option value="Share Market">Share Market</option>
         <option value="Other">Other</option>
       </select>
     </label>
     <button type="submit">Submit</button>
-    <div class="success-message" id="successMessage"></div>
+    <div id="success"></div>
   </form>
 
   <script>
-    const form = document.getElementById("referralForm");
-    form.addEventListener("submit", function (e) {
+    document.getElementById("referralForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      document.getElementById("successMessage").innerText =
-        "Form submitted successfully! Thank you.";
-      form.reset();
+      document.getElementById("success").innerText = "Thank you! Your form is submitted.";
+      this.reset();
     });
   </script>
 </body>
 </html>
+
