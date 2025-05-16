@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BRHELPDESK Referral Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #000000, #444444);
+      color: #fff;
+      padding: 20px;
+    }
+    h2 {
+      color: gold;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+    }
+    button {
+      background: gold;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .success-message {
+      margin-top: 20px;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <h2>BRHELPDESK – Referral Form</h2>
+  <form id="referralForm">
+    <label>Full Name:
+      <input type="text" name="name" required />
+    </label>
+    <label>WhatsApp Number:
+      <input type="tel" name="whatsapp" required />
+    </label>
+    <label>District:
+      <input type="text" name="district" required />
+    </label>
+    <label>Referral Code (Optional):
+      <input type="text" name="referralcode" />
+    </label>
+    <label>Select Referral Apps Used:
+      <select name="apps" required>
+        <option value="">Select</option>
+        <option value="Roz Dhan">Roz Dhan</option>
+        <option value="Share Market">Share Market</option>
+        <option value="CashKaro">CashKaro</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+    <button type="submit">Submit</button>
+    <div class="success-message" id="successMessage"></div>
+  </form>
+
+  <script>
+    const form = document.getElementById("referralForm");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("successMessage").innerText =
+        "Form submitted successfully! Thank you.";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
