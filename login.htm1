@@ -1,1 +1,89 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BRHELPDESK Login</title>
+  <script type="module">
+    // Firebase SDK imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyA-XA4U-F4abd0qt5YpJHSuCw72SK076lc",
+      authDomain: "br-help-desk-haneef.firebaseapp.com",
+      projectId: "br-help-desk-haneef",
+      storageBucket: "br-help-desk-haneef.firebasestorage.app",
+      messagingSenderId: "906120645136",
+      appId: "1:906120645136:web:f02abd4121eb4de1ae1895",
+      measurementId: "G-QTJDDL07J4"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Signup function
+    window.signup = function () {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("User registered successfully!");
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    };
+
+    // Login function
+    window.login = function () {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("User logged in!");
+          document.getElementById("user-info").innerText = "Logged in as: " + userCredential.user.email;
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    };
+
+    // Logout function
+    window.logout = function () {
+      signOut(auth).then(() => {
+        alert("Logged out!");
+        document.getElementById("user-info").innerText = "";
+      });
+    };
+
+    // Detect auth state change
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        document.getElementById("user-info").innerText = "Logged in as: " + user.email;
+      } else {
+        document.getElementById("user-info").innerText = "";
+      }
+    });
+  </script>
+</head>
+<body>
+  <h2>BRHELPDESK Login / Signup</h2>
+  <input type="email" id="email" placeholder="Email" /><br /><br />
+  <input type="password" id="password" placeholder="Password" /><br /><br />
+  <button onclick="signup()">Signup</button>
+  <button onclick="login()">Login</button>
+  <button onclick="logout()">Logout</button>
+  <p id="user-info" style="margin-top:20px;"></p>
+</body>
+</html>
+
